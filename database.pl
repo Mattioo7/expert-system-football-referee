@@ -1,113 +1,113 @@
-football_situation(1,'Nic','_','_','_','_','_','_','_','_','_','_','_','_','_','_','_','_','_','_','_','_','Brak reakcji').
-football_situation(2,'Rozmowa','_','_','_','_','_','_','_','_','_','_','_','_','_','_','_','Sędzia','Sędzia','_','_','_','Brak reakcji').
-football_situation(3,'Rozmowa','_','_','_','_','_','_','_','_','_','_','_','_','_','_','_','Sędzia','Gospodarz','Tak','_','Tak','Czerwona kartka dla gracza gospodarzy').
-football_situation(4,'Rozmowa','_','_','_','_','_','_','_','_','_','_','_','_','_','_','_','Sędzia','Gospodarz','Tak','_','Nie','Żółta kartka dla gracza gospodarzy').
-football_situation(5,'Rozmowa','_','_','_','_','_','_','_','_','_','_','_','_','_','_','_','Sędzia','Gospodarz','Nie','_','_','Brak reakcji').
-football_situation(6,'Rozmowa','_','_','_','_','_','_','_','_','_','_','_','_','_','_','_','Sędzia','Gość','Tak','_','Tak','Czerwona kartka dla gracza gości').
-football_situation(7,'Rozmowa','_','_','_','_','_','_','_','_','_','_','_','_','_','_','_','Sędzia','Gość','Tak','_','Nie','Żółta kartka dla gracza gości').
-football_situation(8,'Rozmowa','_','_','_','_','_','_','_','_','_','_','_','_','_','_','_','Sędzia','Gość','Nie','_','_','Brak reakcji').
-football_situation(9,'Rozmowa','_','_','_','_','_','_','_','_','_','_','_','_','_','_','_','Gospodarz','Gospodarz','_','_','_','Brak reakcji').
-football_situation(10,'Rozmowa','_','_','_','_','_','_','_','_','_','_','_','_','_','_','_','Gospodarz','Sędzia','Tak','_','Tak','Czerwona kartka dla gracza gospodarzy').
-football_situation(11,'Rozmowa','_','_','_','_','_','_','_','_','_','_','_','_','_','_','_','Gospodarz','Sędzia','Tak','_','Nie','Żółta kartka dla gracza gospodarzy').
-football_situation(12,'Rozmowa','_','_','_','_','_','_','_','_','_','_','_','_','_','_','_','Gospodarz','Sędzia','Nie','_','_','Brak reakcji').
-football_situation(13,'Rozmowa','_','_','_','_','_','_','_','_','_','_','_','_','_','_','_','Gospodarz','Gość','Tak','Gospodarz','Tak','Czerwona kartka dla gracza gospodarzy').
-football_situation(14,'Rozmowa','_','_','_','_','_','_','_','_','_','_','_','_','_','_','_','Gospodarz','Gość','Tak','Gospodarz','Nie','Żółta kartka dla gracza gospodarzy').
-football_situation(15,'Rozmowa','_','_','_','_','_','_','_','_','_','_','_','_','_','_','_','Gospodarz','Gość','Tak','Gość','Tak','Czerwona kartka dla gracza gości').
-football_situation(16,'Rozmowa','_','_','_','_','_','_','_','_','_','_','_','_','_','_','_','Gospodarz','Gość','Tak','Gość','Nie','Żółta kartka dla gracza gości').
-football_situation(17,'Rozmowa','_','_','_','_','_','_','_','_','_','_','_','_','_','_','_','Gospodarz','Gość','Nie','_','_','Brak reakcji').
-football_situation(18,'Rozmowa','_','_','_','_','_','_','_','_','_','_','_','_','_','_','_','Gość','Gość','_','_','_','Brak reakcji').
-football_situation(19,'Rozmowa','_','_','_','_','_','_','_','_','_','_','_','_','_','_','_','Gość','Sędzia','Tak','_','Tak','Czerwona kartka dla gracza gości').
-football_situation(20,'Rozmowa','_','_','_','_','_','_','_','_','_','_','_','_','_','_','_','Gość','Sędzia','Tak','_','Nie','Żółta kartka dla gracza gości').
-football_situation(21,'Rozmowa','_','_','_','_','_','_','_','_','_','_','_','_','_','_','_','Gość','Sędzia','Nie','_','_','Brak reakcji').
-football_situation(22,'Rozmowa','_','_','_','_','_','_','_','_','_','_','_','_','_','_','_','Gość','Gospodarz','Tak','Gość','Tak','Czerwona kartka dla gracza gości').
-football_situation(23,'Rozmowa','_','_','_','_','_','_','_','_','_','_','_','_','_','_','_','Gość','Gospodarz','Tak','Gość','Nie','Żółta kartka dla gracza gości').
-football_situation(24,'Rozmowa','_','_','_','_','_','_','_','_','_','_','_','_','_','_','_','Gość','Gospodarz','Tak','Gospodarz','Tak','Czerwona kartka dla gracza gospodarzy').
-football_situation(25,'Rozmowa','_','_','_','_','_','_','_','_','_','_','_','_','_','_','_','Gość','Gospodarz','Tak','Gospodarz','Nie','Żółta kartka dla gracza gospodarzy').
-football_situation(26,'Rozmowa','_','_','_','_','_','_','_','_','_','_','_','_','_','_','_','Gość','Gospodarz','Nie','_','_','Brak reakcji').
-football_situation(27,'Dotknięcie piłki ręką','_','_','_','_','_','_','_','_','_','_','_','_','Poza boiskiem','_','_','_','_','_','_','_','Brak reakcji').
-football_situation(28,'Dotknięcie piłki ręką','_','_','_','_','_','_','_','_','_','_','_','_','Poza polem karnym','Gość','Tak','_','_','_','_','_','Czerwona kartka dla gracza gości').
-football_situation(29,'Dotknięcie piłki ręką','_','_','_','_','_','_','_','_','_','_','_','_','_','Gość','Nie','_','_','_','_','Tak','Czerwona kartka dla gracza gości').
-football_situation(30,'Dotknięcie piłki ręką','_','_','_','_','_','_','_','_','_','_','_','_','_','Gość','Nie','_','_','_','_','Nie','Żółta kartka dla gracza gości').
-football_situation(31,'Dotknięcie piłki ręką','_','_','_','_','_','_','_','_','_','_','_','_','_','Gospodarz','Tak','_','_','_','_','_','Czerwona kartka dla gracza gospodarzy').
-football_situation(32,'Dotknięcie piłki ręką','_','_','_','_','_','_','_','_','_','_','_','_','_','Gospodarz','Nie','_','_','_','_','Tak','Czerwona kartka dla gracza gospodarzy').
-football_situation(33,'Dotknięcie piłki ręką','_','_','_','_','_','_','_','_','_','_','_','_','_','Gospodarz','Nie','_','_','_','_','Nie','Żółta kartka dla gracza gospodarzy').
-football_situation(34,'Dotknięcie piłki ręką','_','_','_','_','_','_','_','_','_','_','_','_','W polu karnym gości','Bramkarz gości','_','_','_','_','_','_','Brak reakcji').
-football_situation(35,'Dotknięcie piłki ręką','_','_','_','_','_','_','_','_','_','_','_','_','_','Gospodarz','_','_','_','_','_','_','Rzut wolny dla gości').
-football_situation(36,'Dotknięcie piłki ręką','_','_','_','_','_','_','_','_','_','_','_','_','_','Gość','Tak','_','_','_','_','_','Czerwona kartka dla gracza gości').
-football_situation(37,'Dotknięcie piłki ręką','_','_','_','_','_','_','_','_','_','_','_','_','_','Gość','Nie','_','_','_','_','Tak','Czerwona kartka dla gracza gości').
-football_situation(38,'Dotknięcie piłki ręką','_','_','_','_','_','_','_','_','_','_','_','_','_','Gość','Nie','_','_','_','_','Nie','Żółta kartka dla gracza gości').
-football_situation(39,'Dotknięcie piłki ręką','_','_','_','_','_','_','_','_','_','_','_','_','W polu karnym gospodarzy','Bramkarz gospodarzy','_','_','_','_','_','_','Brak reakcji').
-football_situation(40,'Dotknięcie piłki ręką','_','_','_','_','_','_','_','_','_','_','_','_','_','Gość','_','_','_','_','_','_','Rzut wolny dla gospodarzy').
-football_situation(41,'Dotknięcie piłki ręką','_','_','_','_','_','_','_','_','_','_','_','_','_','Gospodarz','Tak','_','_','_','_','_','Czerwona kartka dla gracza gospodarzy').
-football_situation(42,'Dotknięcie piłki ręką','_','_','_','_','_','_','_','_','_','_','_','_','_','Gospodarz','Nie','_','_','_','_','Tak','Czerwona kartka dla gracza gospodarzy').
-football_situation(43,'Dotknięcie piłki ręką','_','_','_','_','_','_','_','_','_','_','_','_','_','Gospodarz','Nie','_','_','_','_','Nie','Żółta kartka dla gracza gospodarzy').
-football_situation(44,'Piłka poza boiskiem','Linia boczna','_','Gości','_','_','_','_','_','_','_','_','_','_','_','_','_','_','_','_','_','Aut dla gospodarzy').
-football_situation(45,'Piłka poza boiskiem','Linia boczna','_','Gospodarzy','_','_','_','_','_','_','_','_','_','_','_','_','_','_','_','_','_','Aut dla gości').
-football_situation(46,'Piłka poza boiskiem','Linia końcowa','Gospodarzy','Gości','_','_','_','_','_','_','_','_','_','_','_','_','_','_','_','_','_','Wznowienie od bramki').
-football_situation(47,'Piłka poza boiskiem','Linia końcowa','Gospodarzy','Gospodarzy','_','_','_','_','_','_','_','_','_','_','_','_','_','_','_','_','_','Rzut rożny dla gości').
-football_situation(48,'Piłka poza boiskiem','Linia końcowa','Gości','Gospodarzy','_','_','_','_','_','_','_','_','_','_','_','_','_','_','_','_','_','Wznowienie od bramki').
-football_situation(49,'Piłka poza boiskiem','Linia końcowa','Gości','Gości','_','_','_','_','_','_','_','_','_','_','_','_','_','_','_','_','_','Rzut gości dla gospodarzy').
-football_situation(50,'Podanie','_','_','_','Nie','_','_','_','_','_','_','_','_','_','_','_','_','_','_','_','_','Brak reakcji').
-football_situation(51,'Podanie','_','_','_','Tak','Tak','_','_','_','_','_','_','_','_','_','_','_','_','_','_','_','Brak reakcji').
-football_situation(52,'Podanie','_','_','_','Tak','Nie','Gospodarzy','_','_','_','_','_','_','_','_','_','_','_','_','_','_','Spalony drużyny gospodarzy').
-football_situation(53,'Podanie','_','_','_','Tak','Nie','Gości','_','_','_','_','_','_','_','_','_','_','_','_','_','_','Spalony drużyny gości').
-football_situation(54,'Piłka w bramce','_','_','_','_','_','_','_','_','_','_','_','Gospodarzy','_','_','_','_','_','_','_','_','Gol dla gości').
-football_situation(55,'Piłka w bramce','_','_','_','_','_','_','_','_','_','_','_','Gości','_','_','_','_','_','_','_','_','Gol dla gospodarzy').
-football_situation(56,'Kontakt graczy','_','_','_','_','_','_','Tak','_','_','_','_','_','_','_','_','_','_','_','_','_','Brak reakcji').
-football_situation(57,'Kontakt graczy','_','_','_','_','_','_','Nie','Lekki','Nogi','Pole karne gości','Gospodarz','_','_','_','_','_','_','_','_','_','Rzut wolny dla gości').
-football_situation(58,'Kontakt graczy','_','_','_','_','_','_','Nie','Lekki','Nogi','Pole karne gości','Gość','_','_','_','_','_','_','_','_','_','Żółta kartka dla gości i rzut karny').
-football_situation(59,'Kontakt graczy','_','_','_','_','_','_','Nie','Lekki','Nogi','Pole karne gospodarzy','Gospodarz','_','_','_','_','_','_','_','_','_','Żółta kartka dla gospodarzy i rzut karny').
-football_situation(60,'Kontakt graczy','_','_','_','_','_','_','Nie','Lekki','Nogi','Pole karne gospodarzy','Gość','_','_','_','_','_','_','_','_','_','Rzut wolny dla gospodarzy').
-football_situation(61,'Kontakt graczy','_','_','_','_','_','_','Nie','Lekki','Nogi','Poza polem karnym','Gospodarz','_','_','_','_','_','_','_','_','_','Rzut wolny dla gości').
-football_situation(62,'Kontakt graczy','_','_','_','_','_','_','Nie','Lekki','Nogi','Poza polem karnym','Gość','_','_','_','_','_','_','_','_','_','Rzut wolny dla gospodarzy').
-football_situation(63,'Kontakt graczy','_','_','_','_','_','_','Nie','Lekki','Korpus','Pole karne gości','Gospodarz','_','_','_','_','_','_','_','_','_','Rzut wolny dla gości').
-football_situation(64,'Kontakt graczy','_','_','_','_','_','_','Nie','Lekki','Korpus','Pole karne gości','Gość','_','_','_','_','_','_','_','_','_','Żółta kartka dla gości i rzut karny').
-football_situation(65,'Kontakt graczy','_','_','_','_','_','_','Nie','Lekki','Korpus','Pole karne gospodarzy','Gospodarz','_','_','_','_','_','_','_','_','_','Żółta kartka dla gospodarzy i rzut karny').
-football_situation(66,'Kontakt graczy','_','_','_','_','_','_','Nie','Lekki','Korpus','Pole karne gospodarzy','Gość','_','_','_','_','_','_','_','_','_','Rzut wolny dla gospodarzy').
-football_situation(67,'Kontakt graczy','_','_','_','_','_','_','Nie','Lekki','Korpus','Poza polem karnym','Gospodarz','_','_','_','_','_','_','_','_','_','Rzut wolny dla gości').
-football_situation(68,'Kontakt graczy','_','_','_','_','_','_','Nie','Lekki','Korpus','Poza polem karnym','Gość','_','_','_','_','_','_','_','_','_','Rzut wolny dla gospodarzy').
-football_situation(69,'Kontakt graczy','_','_','_','_','_','_','Nie','Lekki','Głowa','Pole karne gości','Gospodarz','_','_','_','_','_','_','_','_','_','Żółta kartka dla gospodarzy i rzut wolny').
-football_situation(70,'Kontakt graczy','_','_','_','_','_','_','Nie','Lekki','Głowa','Pole karne gości','Gość','_','_','_','_','_','_','_','_','_','Żółta kartka dla gości i rzut karny').
-football_situation(71,'Kontakt graczy','_','_','_','_','_','_','Nie','Lekki','Głowa','Pole karne gospodarzy','Gospodarz','_','_','_','_','_','_','_','_','_','Żółta kartka dla gospodarzy i rzut karny').
-football_situation(72,'Kontakt graczy','_','_','_','_','_','_','Nie','Lekki','Głowa','Pole karne gospodarzy','Gość','_','_','_','_','_','_','_','_','_','Żółta kartka dla gości i rzut wolny').
-football_situation(73,'Kontakt graczy','_','_','_','_','_','_','Nie','Lekki','Głowa','Poza polem karnym','Gospodarz','_','_','_','_','_','_','_','_','_','Rzut wolny dla gości').
-football_situation(74,'Kontakt graczy','_','_','_','_','_','_','Nie','Lekki','Głowa','Poza polem karnym','Gość','_','_','_','_','_','_','_','_','_','Rzut wolny dla gospodarzy').
-football_situation(75,'Kontakt graczy','_','_','_','_','_','_','Nie','Przeciętny','Nogi','Pole karne gości','Gospodarz','_','_','_','_','_','_','_','_','_','Żółta kartka dla gospodarzy i rzut wolny').
-football_situation(76,'Kontakt graczy','_','_','_','_','_','_','Nie','Przeciętny','Nogi','Pole karne gości','Gość','_','_','_','_','_','_','_','_','_','Żółta kartka dla gości i rzut karny').
-football_situation(77,'Kontakt graczy','_','_','_','_','_','_','Nie','Przeciętny','Nogi','Pole karne gospodarzy','Gospodarz','_','_','_','_','_','_','_','_','_','Żółta kartka dla gospodarzy i rzut karny').
-football_situation(78,'Kontakt graczy','_','_','_','_','_','_','Nie','Przeciętny','Nogi','Pole karne gospodarzy','Gość','_','_','_','_','_','_','_','_','_','Żółta kartka dla gości i rzut wolny').
-football_situation(79,'Kontakt graczy','_','_','_','_','_','_','Nie','Przeciętny','Nogi','Poza polem karnym','Gospodarz','_','_','_','_','_','_','_','_','_','Rzut wolny dla gości').
-football_situation(80,'Kontakt graczy','_','_','_','_','_','_','Nie','Przeciętny','Nogi','Poza polem karnym','Gość','_','_','_','_','_','_','_','_','_','Rzut wolny dla gospodarzy').
-football_situation(81,'Kontakt graczy','_','_','_','_','_','_','Nie','Przeciętny','Korpus','Pole karne gości','Gospodarz','_','_','_','_','_','_','_','_','_','Żółta kartka dla gospodarzy i rzut wolny').
-football_situation(82,'Kontakt graczy','_','_','_','_','_','_','Nie','Przeciętny','Korpus','Pole karne gości','Gość','_','_','_','_','_','_','_','_','_','Żółta kartka dla gości i rzut karny').
-football_situation(83,'Kontakt graczy','_','_','_','_','_','_','Nie','Przeciętny','Korpus','Pole karne gospodarzy','Gospodarz','_','_','_','_','_','_','_','_','_','Żółta kartka dla gospodarzy i rzut karny').
-football_situation(84,'Kontakt graczy','_','_','_','_','_','_','Nie','Przeciętny','Korpus','Pole karne gospodarzy','Gość','_','_','_','_','_','_','_','_','_','Żółta kartka dla gości i rzut wolny').
-football_situation(85,'Kontakt graczy','_','_','_','_','_','_','Nie','Przeciętny','Korpus','Poza polem karnym','Gospodarz','_','_','_','_','_','_','_','_','_','Rzut wolny dla gości').
-football_situation(86,'Kontakt graczy','_','_','_','_','_','_','Nie','Przeciętny','Korpus','Poza polem karnym','Gość','_','_','_','_','_','_','_','_','_','Rzut wolny dla gospodarzy').
-football_situation(87,'Kontakt graczy','_','_','_','_','_','_','Nie','Przeciętny','Głowa','Pole karne gości','Gospodarz','_','_','_','_','_','_','_','_','_','Żółta kartka dla gospodarzy i rzut wolny').
-football_situation(88,'Kontakt graczy','_','_','_','_','_','_','Nie','Przeciętny','Głowa','Pole karne gości','Gość','_','_','_','_','_','_','_','_','_','Żółta kartka dla gości i rzut karny').
-football_situation(89,'Kontakt graczy','_','_','_','_','_','_','Nie','Przeciętny','Głowa','Pole karne gospodarzy','Gospodarz','_','_','_','_','_','_','_','_','_','Czerwona kartka dla gospodarzy i rzut karny').
-football_situation(90,'Kontakt graczy','_','_','_','_','_','_','Nie','Przeciętny','Głowa','Pole karne gospodarzy','Gość','_','_','_','_','_','_','_','_','_','Żółta kartka dla gości i rzut wolny').
-football_situation(91,'Kontakt graczy','_','_','_','_','_','_','Nie','Przeciętny','Głowa','Poza polem karnym','Gospodarz','_','_','_','_','_','_','_','_','_','Żółta kartka dla gospodarzy i rzut wolny').
-football_situation(92,'Kontakt graczy','_','_','_','_','_','_','Nie','Przeciętny','Głowa','Poza polem karnym','Gość','_','_','_','_','_','_','_','_','_','Żółta kartka dla gości i rzut wolny').
-football_situation(93,'Kontakt graczy','_','_','_','_','_','_','Nie','Ostry','Nogi','Pole karne gości','Gospodarz','_','_','_','_','_','_','_','_','_','Żółta kartka dla gospodarzy i rzut wolny').
-football_situation(94,'Kontakt graczy','_','_','_','_','_','_','Nie','Ostry','Nogi','Pole karne gości','Gość','_','_','_','_','_','_','_','_','_','Żółta kartka dla gości i rzut karny').
-football_situation(95,'Kontakt graczy','_','_','_','_','_','_','Nie','Ostry','Nogi','Pole karne gospodarzy','Gospodarz','_','_','_','_','_','_','_','_','_','Czerwona kartka dla gospodarzy i rzut karny').
-football_situation(96,'Kontakt graczy','_','_','_','_','_','_','Nie','Ostry','Nogi','Pole karne gospodarzy','Gość','_','_','_','_','_','_','_','_','_','Żółta kartka dla gości i rzut wolny').
-football_situation(97,'Kontakt graczy','_','_','_','_','_','_','Nie','Ostry','Nogi','Poza polem karnym','Gospodarz','_','_','_','_','_','_','_','_','_','Żółta kartka dla gospodarzy i rzut wolny').
-football_situation(98,'Kontakt graczy','_','_','_','_','_','_','Nie','Ostry','Nogi','Poza polem karnym','Gość','_','_','_','_','_','_','_','_','_','Żółta kartka dla gości i rzut wolny').
-football_situation(99,'Kontakt graczy','_','_','_','_','_','_','Nie','Ostry','Korpus','Pole karne gości','Gospodarz','_','_','_','_','_','_','_','_','_','Żółta kartka dla gospodarzy i rzut wolny').
-football_situation(100,'Kontakt graczy','_','_','_','_','_','_','Nie','Ostry','Korpus','Pole karne gości','Gość','_','_','_','_','_','_','_','_','_','Żółta kartka dla gości i rzut karny').
-football_situation(101,'Kontakt graczy','_','_','_','_','_','_','Nie','Ostry','Korpus','Pole karne gospodarzy','Gospodarz','_','_','_','_','_','_','_','_','_','Czerwona kartka dla gospodarzy i rzut karny').
-football_situation(102,'Kontakt graczy','_','_','_','_','_','_','Nie','Ostry','Korpus','Pole karne gospodarzy','Gość','_','_','_','_','_','_','_','_','_','Żółta kartka dla gości i rzut wolny').
-football_situation(103,'Kontakt graczy','_','_','_','_','_','_','Nie','Ostry','Korpus','Poza polem karnym','Gospodarz','_','_','_','_','_','_','_','_','_','Żółta kartka dla gospodarzy i rzut wolny').
-football_situation(104,'Kontakt graczy','_','_','_','_','_','_','Nie','Ostry','Korpus','Poza polem karnym','Gość','_','_','_','_','_','_','_','_','_','Czerwona kartka dla gości i rzut wolny').
-football_situation(105,'Kontakt graczy','_','_','_','_','_','_','Nie','Ostry','Głowa','Pole karne gości','Gospodarz','_','_','_','_','_','_','_','_','_','Czerwona kartka dla gospodarzy i rzut wolny').
-football_situation(106,'Kontakt graczy','_','_','_','_','_','_','Nie','Ostry','Głowa','Pole karne gości','Gość','_','_','_','_','_','_','_','_','_','Czerwona kartka dla gości i rzut karny').
-football_situation(107,'Kontakt graczy','_','_','_','_','_','_','Nie','Ostry','Głowa','Pole karne gospodarzy','Gospodarz','_','_','_','_','_','_','_','_','_','Czerwona kartka dla gospodarzy i rzut karny').
-football_situation(108,'Kontakt graczy','_','_','_','_','_','_','Nie','Ostry','Głowa','Pole karne gospodarzy','Gość','_','_','_','_','_','_','_','_','_','Czerwona kartka dla gości i rzut wolny').
-football_situation(109,'Kontakt graczy','_','_','_','_','_','_','Nie','Ostry','Głowa','Poza polem karnym','Gospodarz','_','_','_','_','_','_','_','_','_','Czerwona kartka dla gospodarzy i rzut wolny').
-football_situation(110,'Kontakt graczy','_','_','_','_','_','_','Nie','Ostry','Głowa','Poza polem karnym','Gość','_','_','_','_','_','_','_','_','_','Czerwona kartka dla gości i rzut wolny').
+football_situation(1,'Nic','_','_','_','_','_','_','_','_','_','_','_','_','_','_','_','_','_','_','_','_','Brak_reakcji').
+football_situation(2,'Rozmowa','_','_','_','_','_','_','_','_','_','_','_','_','_','_','_','Sedzia','Sedzia','_','_','_','Brak_reakcji').
+football_situation(3,'Rozmowa','_','_','_','_','_','_','_','_','_','_','_','_','_','_','_','Sedzia','Gospodarz','Tak','_','Tak','Czerwona_kartka_dla_gracza_gospodarzy').
+football_situation(4,'Rozmowa','_','_','_','_','_','_','_','_','_','_','_','_','_','_','_','Sedzia','Gospodarz','Tak','_','Nie','Zolta_kartka_dla_gracza_gospodarzy').
+football_situation(5,'Rozmowa','_','_','_','_','_','_','_','_','_','_','_','_','_','_','_','Sedzia','Gospodarz','Nie','_','_','Brak_reakcji').
+football_situation(6,'Rozmowa','_','_','_','_','_','_','_','_','_','_','_','_','_','_','_','Sedzia','Gosc','Tak','_','Tak','Czerwona_kartka_dla_gracza_gosci').
+football_situation(7,'Rozmowa','_','_','_','_','_','_','_','_','_','_','_','_','_','_','_','Sedzia','Gosc','Tak','_','Nie','Zolta_kartka_dla_gracza_gosci').
+football_situation(8,'Rozmowa','_','_','_','_','_','_','_','_','_','_','_','_','_','_','_','Sedzia','Gosc','Nie','_','_','Brak_reakcji').
+football_situation(9,'Rozmowa','_','_','_','_','_','_','_','_','_','_','_','_','_','_','_','Gospodarz','Gospodarz','_','_','_','Brak_reakcji').
+football_situation(10,'Rozmowa','_','_','_','_','_','_','_','_','_','_','_','_','_','_','_','Gospodarz','Sedzia','Tak','_','Tak','Czerwona_kartka_dla_gracza_gospodarzy').
+football_situation(11,'Rozmowa','_','_','_','_','_','_','_','_','_','_','_','_','_','_','_','Gospodarz','Sedzia','Tak','_','Nie','Zolta_kartka_dla_gracza_gospodarzy').
+football_situation(12,'Rozmowa','_','_','_','_','_','_','_','_','_','_','_','_','_','_','_','Gospodarz','Sedzia','Nie','_','_','Brak_reakcji').
+football_situation(13,'Rozmowa','_','_','_','_','_','_','_','_','_','_','_','_','_','_','_','Gospodarz','Gosc','Tak','Gospodarz','Tak','Czerwona_kartka_dla_gracza_gospodarzy').
+football_situation(14,'Rozmowa','_','_','_','_','_','_','_','_','_','_','_','_','_','_','_','Gospodarz','Gosc','Tak','Gospodarz','Nie','Zolta_kartka_dla_gracza_gospodarzy').
+football_situation(15,'Rozmowa','_','_','_','_','_','_','_','_','_','_','_','_','_','_','_','Gospodarz','Gosc','Tak','Gosc','Tak','Czerwona_kartka_dla_gracza_gosci').
+football_situation(16,'Rozmowa','_','_','_','_','_','_','_','_','_','_','_','_','_','_','_','Gospodarz','Gosc','Tak','Gosc','Nie','Zolta_kartka_dla_gracza_gosci').
+football_situation(17,'Rozmowa','_','_','_','_','_','_','_','_','_','_','_','_','_','_','_','Gospodarz','Gosc','Nie','_','_','Brak_reakcji').
+football_situation(18,'Rozmowa','_','_','_','_','_','_','_','_','_','_','_','_','_','_','_','Gosc','Gosc','_','_','_','Brak_reakcji').
+football_situation(19,'Rozmowa','_','_','_','_','_','_','_','_','_','_','_','_','_','_','_','Gosc','Sedzia','Tak','_','Tak','Czerwona_kartka_dla_gracza_gosci').
+football_situation(20,'Rozmowa','_','_','_','_','_','_','_','_','_','_','_','_','_','_','_','Gosc','Sedzia','Tak','_','Nie','Zolta_kartka_dla_gracza_gosci').
+football_situation(21,'Rozmowa','_','_','_','_','_','_','_','_','_','_','_','_','_','_','_','Gosc','Sedzia','Nie','_','_','Brak_reakcji').
+football_situation(22,'Rozmowa','_','_','_','_','_','_','_','_','_','_','_','_','_','_','_','Gosc','Gospodarz','Tak','Gosc','Tak','Czerwona_kartka_dla_gracza_gosci').
+football_situation(23,'Rozmowa','_','_','_','_','_','_','_','_','_','_','_','_','_','_','_','Gosc','Gospodarz','Tak','Gosc','Nie','Zolta_kartka_dla_gracza_gosci').
+football_situation(24,'Rozmowa','_','_','_','_','_','_','_','_','_','_','_','_','_','_','_','Gosc','Gospodarz','Tak','Gospodarz','Tak','Czerwona_kartka_dla_gracza_gospodarzy').
+football_situation(25,'Rozmowa','_','_','_','_','_','_','_','_','_','_','_','_','_','_','_','Gosc','Gospodarz','Tak','Gospodarz','Nie','Zolta_kartka_dla_gracza_gospodarzy').
+football_situation(26,'Rozmowa','_','_','_','_','_','_','_','_','_','_','_','_','_','_','_','Gosc','Gospodarz','Nie','_','_','Brak_reakcji').
+football_situation(27,'Dotkniecie_pilki_reka','_','_','_','_','_','_','_','_','_','_','_','_','Poza_boiskiem','_','_','_','_','_','_','_','Brak_reakcji').
+football_situation(28,'Dotkniecie_pilki_reka','_','_','_','_','_','_','_','_','_','_','_','_','Poza_polem_karnym','Gosc','Tak','_','_','_','_','_','Czerwona_kartka_dla_gracza_gosci').
+football_situation(29,'Dotkniecie_pilki_reka','_','_','_','_','_','_','_','_','_','_','_','_','_','Gosc','Nie','_','_','_','_','Tak','Czerwona_kartka_dla_gracza_gosci').
+football_situation(30,'Dotkniecie_pilki_reka','_','_','_','_','_','_','_','_','_','_','_','_','_','Gosc','Nie','_','_','_','_','Nie','Zolta_kartka_dla_gracza_gosci').
+football_situation(31,'Dotkniecie_pilki_reka','_','_','_','_','_','_','_','_','_','_','_','_','_','Gospodarz','Tak','_','_','_','_','_','Czerwona_kartka_dla_gracza_gospodarzy').
+football_situation(32,'Dotkniecie_pilki_reka','_','_','_','_','_','_','_','_','_','_','_','_','_','Gospodarz','Nie','_','_','_','_','Tak','Czerwona_kartka_dla_gracza_gospodarzy').
+football_situation(33,'Dotkniecie_pilki_reka','_','_','_','_','_','_','_','_','_','_','_','_','_','Gospodarz','Nie','_','_','_','_','Nie','Zolta_kartka_dla_gracza_gospodarzy').
+football_situation(34,'Dotkniecie_pilki_reka','_','_','_','_','_','_','_','_','_','_','_','_','W_polu_karnym_gosci','Bramkarz_gosci','_','_','_','_','_','_','Brak_reakcji').
+football_situation(35,'Dotkniecie_pilki_reka','_','_','_','_','_','_','_','_','_','_','_','_','_','Gospodarz','_','_','_','_','_','_','Rzut_wolny_dla_gosci').
+football_situation(36,'Dotkniecie_pilki_reka','_','_','_','_','_','_','_','_','_','_','_','_','_','Gosc','Tak','_','_','_','_','_','Czerwona_kartka_dla_gracza_gosci').
+football_situation(37,'Dotkniecie_pilki_reka','_','_','_','_','_','_','_','_','_','_','_','_','_','Gosc','Nie','_','_','_','_','Tak','Czerwona_kartka_dla_gracza_gosci').
+football_situation(38,'Dotkniecie_pilki_reka','_','_','_','_','_','_','_','_','_','_','_','_','_','Gosc','Nie','_','_','_','_','Nie','Zolta_kartka_dla_gracza_gosci').
+football_situation(39,'Dotkniecie_pilki_reka','_','_','_','_','_','_','_','_','_','_','_','_','W_polu_karnym_gospodarzy','Bramkarz_gospodarzy','_','_','_','_','_','_','Brak_reakcji').
+football_situation(40,'Dotkniecie_pilki_reka','_','_','_','_','_','_','_','_','_','_','_','_','_','Gosc','_','_','_','_','_','_','Rzut_wolny_dla_gospodarzy').
+football_situation(41,'Dotkniecie_pilki_reka','_','_','_','_','_','_','_','_','_','_','_','_','_','Gospodarz','Tak','_','_','_','_','_','Czerwona_kartka_dla_gracza_gospodarzy').
+football_situation(42,'Dotkniecie_pilki_reka','_','_','_','_','_','_','_','_','_','_','_','_','_','Gospodarz','Nie','_','_','_','_','Tak','Czerwona_kartka_dla_gracza_gospodarzy').
+football_situation(43,'Dotkniecie_pilki_reka','_','_','_','_','_','_','_','_','_','_','_','_','_','Gospodarz','Nie','_','_','_','_','Nie','Zolta_kartka_dla_gracza_gospodarzy').
+football_situation(44,'Pilka_poza_boiskiem','Linia_boczna','_','Gosci','_','_','_','_','_','_','_','_','_','_','_','_','_','_','_','_','_','Aut_dla_gospodarzy').
+football_situation(45,'Pilka_poza_boiskiem','Linia_boczna','_','Gospodarzy','_','_','_','_','_','_','_','_','_','_','_','_','_','_','_','_','_','Aut_dla_gosci').
+football_situation(46,'Pilka_poza_boiskiem','Linia_końcowa','Gospodarzy','Gosci','_','_','_','_','_','_','_','_','_','_','_','_','_','_','_','_','_','Wznowienie_od_bramki').
+football_situation(47,'Pilka_poza_boiskiem','Linia_końcowa','Gospodarzy','Gospodarzy','_','_','_','_','_','_','_','_','_','_','_','_','_','_','_','_','_','Rzut_rozny_dla_gosci').
+football_situation(48,'Pilka_poza_boiskiem','Linia_końcowa','Gosci','Gospodarzy','_','_','_','_','_','_','_','_','_','_','_','_','_','_','_','_','_','Wznowienie_od_bramki').
+football_situation(49,'Pilka_poza_boiskiem','Linia_końcowa','Gosci','Gosci','_','_','_','_','_','_','_','_','_','_','_','_','_','_','_','_','_','Rzut_gosci_dla_gospodarzy').
+football_situation(50,'Podanie','_','_','_','Nie','_','_','_','_','_','_','_','_','_','_','_','_','_','_','_','_','Brak_reakcji').
+football_situation(51,'Podanie','_','_','_','Tak','Tak','_','_','_','_','_','_','_','_','_','_','_','_','_','_','_','Brak_reakcji').
+football_situation(52,'Podanie','_','_','_','Tak','Nie','Gospodarzy','_','_','_','_','_','_','_','_','_','_','_','_','_','_','Spalony_druzyny_gospodarzy').
+football_situation(53,'Podanie','_','_','_','Tak','Nie','Gosci','_','_','_','_','_','_','_','_','_','_','_','_','_','_','Spalony_druzyny_gosci').
+football_situation(54,'Pilka_w_bramce','_','_','_','_','_','_','_','_','_','_','_','Gospodarzy','_','_','_','_','_','_','_','_','Gol_dla_gosci').
+football_situation(55,'Pilka_w_bramce','_','_','_','_','_','_','_','_','_','_','_','Gosci','_','_','_','_','_','_','_','_','Gol_dla_gospodarzy').
+football_situation(56,'Kontakt_graczy','_','_','_','_','_','_','Tak','_','_','_','_','_','_','_','_','_','_','_','_','_','Brak_reakcji').
+football_situation(57,'Kontakt_graczy','_','_','_','_','_','_','Nie','Lekki','Nogi','Pole_karne_gosci','Gospodarz','_','_','_','_','_','_','_','_','_','Rzut_wolny_dla_gosci').
+football_situation(58,'Kontakt_graczy','_','_','_','_','_','_','Nie','Lekki','Nogi','Pole_karne_gosci','Gosc','_','_','_','_','_','_','_','_','_','Zolta_kartka_dla_gosci_i_rzut_karny').
+football_situation(59,'Kontakt_graczy','_','_','_','_','_','_','Nie','Lekki','Nogi','Pole_karne_gospodarzy','Gospodarz','_','_','_','_','_','_','_','_','_','Zolta_kartka_dla_gospodarzy_i_rzut_karny').
+football_situation(60,'Kontakt_graczy','_','_','_','_','_','_','Nie','Lekki','Nogi','Pole_karne_gospodarzy','Gosc','_','_','_','_','_','_','_','_','_','Rzut_wolny_dla_gospodarzy').
+football_situation(61,'Kontakt_graczy','_','_','_','_','_','_','Nie','Lekki','Nogi','Poza_polem_karnym','Gospodarz','_','_','_','_','_','_','_','_','_','Rzut_wolny_dla_gosci').
+football_situation(62,'Kontakt_graczy','_','_','_','_','_','_','Nie','Lekki','Nogi','Poza_polem_karnym','Gosc','_','_','_','_','_','_','_','_','_','Rzut_wolny_dla_gospodarzy').
+football_situation(63,'Kontakt_graczy','_','_','_','_','_','_','Nie','Lekki','Korpus','Pole_karne_gosci','Gospodarz','_','_','_','_','_','_','_','_','_','Rzut_wolny_dla_gosci').
+football_situation(64,'Kontakt_graczy','_','_','_','_','_','_','Nie','Lekki','Korpus','Pole_karne_gosci','Gosc','_','_','_','_','_','_','_','_','_','Zolta_kartka_dla_gosci_i_rzut_karny').
+football_situation(65,'Kontakt_graczy','_','_','_','_','_','_','Nie','Lekki','Korpus','Pole_karne_gospodarzy','Gospodarz','_','_','_','_','_','_','_','_','_','Zolta_kartka_dla_gospodarzy_i_rzut_karny').
+football_situation(66,'Kontakt_graczy','_','_','_','_','_','_','Nie','Lekki','Korpus','Pole_karne_gospodarzy','Gosc','_','_','_','_','_','_','_','_','_','Rzut_wolny_dla_gospodarzy').
+football_situation(67,'Kontakt_graczy','_','_','_','_','_','_','Nie','Lekki','Korpus','Poza_polem_karnym','Gospodarz','_','_','_','_','_','_','_','_','_','Rzut_wolny_dla_gosci').
+football_situation(68,'Kontakt_graczy','_','_','_','_','_','_','Nie','Lekki','Korpus','Poza_polem_karnym','Gosc','_','_','_','_','_','_','_','_','_','Rzut_wolny_dla_gospodarzy').
+football_situation(69,'Kontakt_graczy','_','_','_','_','_','_','Nie','Lekki','Glowa','Pole_karne_gosci','Gospodarz','_','_','_','_','_','_','_','_','_','Zolta_kartka_dla_gospodarzy_i_rzut_wolny').
+football_situation(70,'Kontakt_graczy','_','_','_','_','_','_','Nie','Lekki','Glowa','Pole_karne_gosci','Gosc','_','_','_','_','_','_','_','_','_','Zolta_kartka_dla_gosci_i_rzut_karny').
+football_situation(71,'Kontakt_graczy','_','_','_','_','_','_','Nie','Lekki','Glowa','Pole_karne_gospodarzy','Gospodarz','_','_','_','_','_','_','_','_','_','Zolta_kartka_dla_gospodarzy_i_rzut_karny').
+football_situation(72,'Kontakt_graczy','_','_','_','_','_','_','Nie','Lekki','Glowa','Pole_karne_gospodarzy','Gosc','_','_','_','_','_','_','_','_','_','Zolta_kartka_dla_gosci_i_rzut_wolny').
+football_situation(73,'Kontakt_graczy','_','_','_','_','_','_','Nie','Lekki','Glowa','Poza_polem_karnym','Gospodarz','_','_','_','_','_','_','_','_','_','Rzut_wolny_dla_gosci').
+football_situation(74,'Kontakt_graczy','_','_','_','_','_','_','Nie','Lekki','Glowa','Poza_polem_karnym','Gosc','_','_','_','_','_','_','_','_','_','Rzut_wolny_dla_gospodarzy').
+football_situation(75,'Kontakt_graczy','_','_','_','_','_','_','Nie','Przecietny','Nogi','Pole_karne_gosci','Gospodarz','_','_','_','_','_','_','_','_','_','Zolta_kartka_dla_gospodarzy_i_rzut_wolny').
+football_situation(76,'Kontakt_graczy','_','_','_','_','_','_','Nie','Przecietny','Nogi','Pole_karne_gosci','Gosc','_','_','_','_','_','_','_','_','_','Zolta_kartka_dla_gosci_i_rzut_karny').
+football_situation(77,'Kontakt_graczy','_','_','_','_','_','_','Nie','Przecietny','Nogi','Pole_karne_gospodarzy','Gospodarz','_','_','_','_','_','_','_','_','_','Zolta_kartka_dla_gospodarzy_i_rzut_karny').
+football_situation(78,'Kontakt_graczy','_','_','_','_','_','_','Nie','Przecietny','Nogi','Pole_karne_gospodarzy','Gosc','_','_','_','_','_','_','_','_','_','Zolta_kartka_dla_gosci_i_rzut_wolny').
+football_situation(79,'Kontakt_graczy','_','_','_','_','_','_','Nie','Przecietny','Nogi','Poza_polem_karnym','Gospodarz','_','_','_','_','_','_','_','_','_','Rzut_wolny_dla_gosci').
+football_situation(80,'Kontakt_graczy','_','_','_','_','_','_','Nie','Przecietny','Nogi','Poza_polem_karnym','Gosc','_','_','_','_','_','_','_','_','_','Rzut_wolny_dla_gospodarzy').
+football_situation(81,'Kontakt_graczy','_','_','_','_','_','_','Nie','Przecietny','Korpus','Pole_karne_gosci','Gospodarz','_','_','_','_','_','_','_','_','_','Zolta_kartka_dla_gospodarzy_i_rzut_wolny').
+football_situation(82,'Kontakt_graczy','_','_','_','_','_','_','Nie','Przecietny','Korpus','Pole_karne_gosci','Gosc','_','_','_','_','_','_','_','_','_','Zolta_kartka_dla_gosci_i_rzut_karny').
+football_situation(83,'Kontakt_graczy','_','_','_','_','_','_','Nie','Przecietny','Korpus','Pole_karne_gospodarzy','Gospodarz','_','_','_','_','_','_','_','_','_','Zolta_kartka_dla_gospodarzy_i_rzut_karny').
+football_situation(84,'Kontakt_graczy','_','_','_','_','_','_','Nie','Przecietny','Korpus','Pole_karne_gospodarzy','Gosc','_','_','_','_','_','_','_','_','_','Zolta_kartka_dla_gosci_i_rzut_wolny').
+football_situation(85,'Kontakt_graczy','_','_','_','_','_','_','Nie','Przecietny','Korpus','Poza_polem_karnym','Gospodarz','_','_','_','_','_','_','_','_','_','Rzut_wolny_dla_gosci').
+football_situation(86,'Kontakt_graczy','_','_','_','_','_','_','Nie','Przecietny','Korpus','Poza_polem_karnym','Gosc','_','_','_','_','_','_','_','_','_','Rzut_wolny_dla_gospodarzy').
+football_situation(87,'Kontakt_graczy','_','_','_','_','_','_','Nie','Przecietny','Glowa','Pole_karne_gosci','Gospodarz','_','_','_','_','_','_','_','_','_','Zolta_kartka_dla_gospodarzy_i_rzut_wolny').
+football_situation(88,'Kontakt_graczy','_','_','_','_','_','_','Nie','Przecietny','Glowa','Pole_karne_gosci','Gosc','_','_','_','_','_','_','_','_','_','Zolta_kartka_dla_gosci_i_rzut_karny').
+football_situation(89,'Kontakt_graczy','_','_','_','_','_','_','Nie','Przecietny','Glowa','Pole_karne_gospodarzy','Gospodarz','_','_','_','_','_','_','_','_','_','Czerwona_kartka_dla_gospodarzy_i_rzut_karny').
+football_situation(90,'Kontakt_graczy','_','_','_','_','_','_','Nie','Przecietny','Glowa','Pole_karne_gospodarzy','Gosc','_','_','_','_','_','_','_','_','_','Zolta_kartka_dla_gosci_i_rzut_wolny').
+football_situation(91,'Kontakt_graczy','_','_','_','_','_','_','Nie','Przecietny','Glowa','Poza_polem_karnym','Gospodarz','_','_','_','_','_','_','_','_','_','Zolta_kartka_dla_gospodarzy_i_rzut_wolny').
+football_situation(92,'Kontakt_graczy','_','_','_','_','_','_','Nie','Przecietny','Glowa','Poza_polem_karnym','Gosc','_','_','_','_','_','_','_','_','_','Zolta_kartka_dla_gosci_i_rzut_wolny').
+football_situation(93,'Kontakt_graczy','_','_','_','_','_','_','Nie','Ostry','Nogi','Pole_karne_gosci','Gospodarz','_','_','_','_','_','_','_','_','_','Zolta_kartka_dla_gospodarzy_i_rzut_wolny').
+football_situation(94,'Kontakt_graczy','_','_','_','_','_','_','Nie','Ostry','Nogi','Pole_karne_gosci','Gosc','_','_','_','_','_','_','_','_','_','Zolta_kartka_dla_gosci_i_rzut_karny').
+football_situation(95,'Kontakt_graczy','_','_','_','_','_','_','Nie','Ostry','Nogi','Pole_karne_gospodarzy','Gospodarz','_','_','_','_','_','_','_','_','_','Czerwona_kartka_dla_gospodarzy_i_rzut_karny').
+football_situation(96,'Kontakt_graczy','_','_','_','_','_','_','Nie','Ostry','Nogi','Pole_karne_gospodarzy','Gosc','_','_','_','_','_','_','_','_','_','Zolta_kartka_dla_gosci_i_rzut_wolny').
+football_situation(97,'Kontakt_graczy','_','_','_','_','_','_','Nie','Ostry','Nogi','Poza_polem_karnym','Gospodarz','_','_','_','_','_','_','_','_','_','Zolta_kartka_dla_gospodarzy_i_rzut_wolny').
+football_situation(98,'Kontakt_graczy','_','_','_','_','_','_','Nie','Ostry','Nogi','Poza_polem_karnym','Gosc','_','_','_','_','_','_','_','_','_','Zolta_kartka_dla_gosci_i_rzut_wolny').
+football_situation(99,'Kontakt_graczy','_','_','_','_','_','_','Nie','Ostry','Korpus','Pole_karne_gosci','Gospodarz','_','_','_','_','_','_','_','_','_','Zolta_kartka_dla_gospodarzy_i_rzut_wolny').
+football_situation(100,'Kontakt_graczy','_','_','_','_','_','_','Nie','Ostry','Korpus','Pole_karne_gosci','Gosc','_','_','_','_','_','_','_','_','_','Zolta_kartka_dla_gosci_i_rzut_karny').
+football_situation(101,'Kontakt_graczy','_','_','_','_','_','_','Nie','Ostry','Korpus','Pole_karne_gospodarzy','Gospodarz','_','_','_','_','_','_','_','_','_','Czerwona_kartka_dla_gospodarzy_i_rzut_karny').
+football_situation(102,'Kontakt_graczy','_','_','_','_','_','_','Nie','Ostry','Korpus','Pole_karne_gospodarzy','Gosc','_','_','_','_','_','_','_','_','_','Zolta_kartka_dla_gosci_i_rzut_wolny').
+football_situation(103,'Kontakt_graczy','_','_','_','_','_','_','Nie','Ostry','Korpus','Poza_polem_karnym','Gospodarz','_','_','_','_','_','_','_','_','_','Zolta_kartka_dla_gospodarzy_i_rzut_wolny').
+football_situation(104,'Kontakt_graczy','_','_','_','_','_','_','Nie','Ostry','Korpus','Poza_polem_karnym','Gosc','_','_','_','_','_','_','_','_','_','Czerwona_kartka_dla_gosci_i_rzut_wolny').
+football_situation(105,'Kontakt_graczy','_','_','_','_','_','_','Nie','Ostry','Glowa','Pole_karne_gosci','Gospodarz','_','_','_','_','_','_','_','_','_','Czerwona_kartka_dla_gospodarzy_i_rzut_wolny').
+football_situation(106,'Kontakt_graczy','_','_','_','_','_','_','Nie','Ostry','Glowa','Pole_karne_gosci','Gosc','_','_','_','_','_','_','_','_','_','Czerwona_kartka_dla_gosci_i_rzut_karny').
+football_situation(107,'Kontakt_graczy','_','_','_','_','_','_','Nie','Ostry','Glowa','Pole_karne_gospodarzy','Gospodarz','_','_','_','_','_','_','_','_','_','Czerwona_kartka_dla_gospodarzy_i_rzut_karny').
+football_situation(108,'Kontakt_graczy','_','_','_','_','_','_','Nie','Ostry','Glowa','Pole_karne_gospodarzy','Gosc','_','_','_','_','_','_','_','_','_','Czerwona_kartka_dla_gosci_i_rzut_wolny').
+football_situation(109,'Kontakt_graczy','_','_','_','_','_','_','Nie','Ostry','Glowa','Poza_polem_karnym','Gospodarz','_','_','_','_','_','_','_','_','_','Czerwona_kartka_dla_gospodarzy_i_rzut_wolny').
+football_situation(110,'Kontakt_graczy','_','_','_','_','_','_','Nie','Ostry','Glowa','Poza_polem_karnym','Gosc','_','_','_','_','_','_','_','_','_','Czerwona_kartka_dla_gosci_i_rzut_wolny').
 
 
 % Rule to get the attribute value by index.
