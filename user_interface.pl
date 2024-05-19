@@ -2,5 +2,8 @@
 
 % Start the process
 main :-
-    find_matching_football_situation(MatchingEntry),
-    format('Matching football_situation: ~w~n', [MatchingEntry]).
+    find_matching_trip(MatchingTripID),
+    (   MatchingTripID = 'Trip not found.' ->
+        format('Matching trip: ~w~n', [MatchingTripID])
+    ;   format('Matching trip country: ~w~n', [MatchingTripID])
+    ).

@@ -1,17 +1,17 @@
-football_situation(1,'Nic','_','_','_','_','_','_','_','_','_','_','_','_','_','_','_','_','_','_','_','_','Brak_reakcji').
-football_situation(2,'Rozmowa','A','_','_','_','_','_','_','_','_','_','_','_','_','_','_','Sedzia','Sedzia','_','_','_','Brak_reakcji').
-football_situation(3,'Rozmowa','B','_','_','_','_','_','_','_','_','_','_','_','_','_','_','Sedzia','Gospodarz','Tak','_','Tak','Brak_reakcji').
+football_situation(1,    'Nic',  _,_,_,_,_,_,_,_,_,_,_,_,_,_,_,       _,          _,_,_,_,'Brak_reakcji1').
+football_situation(2,'Rozmowa','A',_,_,_,_,_,_,_,_,_,_,_,_,_,_,'Sedzia',   'Sedzia',_,_,_,'Brak_reakcji2').
+football_situation(3,'Rozmowa','B',_,_,_,_,_,_,_,_,_,_,_,_,_,_,'Sedzia','Gospodarz',_,_,_,'Brak_reakcji3').
 
 % Rule to get the attribute value by index.
-get_attr_value(ID, 1, A1) :- football_situation(ID, A1, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _).
-get_attr_value(ID, 2, A2) :- football_situation(ID, _, A2, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _).
-get_attr_value(ID, 3, A3) :- football_situation(ID, _, _, A3, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _).
-get_attr_value(ID, 4, A4) :- football_situation(ID, _, _, _, A4, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _).
-get_attr_value(ID, 5, A5) :- football_situation(ID, _, _, _, _, A5, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _).
-get_attr_value(ID, 6, A6) :- football_situation(ID, _, _, _, _, _, A6, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _).
-get_attr_value(ID, 7, A7) :- football_situation(ID, _, _, _, _, _, _, A7, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _).
-get_attr_value(ID, 8, A8) :- football_situation(ID, _, _, _, _, _, _, _, A8, _, _, _, _, _, _, _, _, _, _, _, _, _, _).
-get_attr_value(ID, 9, A9) :- football_situation(ID, _, _, _, _, _, _, _, _, A9, _, _, _, _, _, _, _, _, _, _, _, _, _).
+get_attr_value(ID, 1,   A1) :- football_situation(ID, A1, _, _, _, _, _, _, _, _,  _, _, _, _, _, _, _, _, _, _, _, _, _).
+get_attr_value(ID, 2,   A2) :- football_situation(ID, _, A2, _, _, _, _, _, _, _,  _, _, _, _, _, _, _, _, _, _, _, _, _).
+get_attr_value(ID, 3,   A3) :- football_situation(ID, _, _, A3, _, _, _, _, _, _,  _, _, _, _, _, _, _, _, _, _, _, _, _).
+get_attr_value(ID, 4,   A4) :- football_situation(ID, _, _, _, A4, _, _, _, _, _,  _, _, _, _, _, _, _, _, _, _, _, _, _).
+get_attr_value(ID, 5,   A5) :- football_situation(ID, _, _, _, _, A5, _, _, _, _,  _, _, _, _, _, _, _, _, _, _, _, _, _).
+get_attr_value(ID, 6,   A6) :- football_situation(ID, _, _, _, _, _, A6, _, _, _,  _, _, _, _, _, _, _, _, _, _, _, _, _).
+get_attr_value(ID, 7,   A7) :- football_situation(ID, _, _, _, _, _, _, A7, _, _,  _, _, _, _, _, _, _, _, _, _, _, _, _).
+get_attr_value(ID, 8,   A8) :- football_situation(ID, _, _, _, _, _, _, _, A8, _,  _, _, _, _, _, _, _, _, _, _, _, _, _).
+get_attr_value(ID, 9,   A9) :- football_situation(ID, _, _, _, _, _, _, _, _, A9,  _, _, _, _, _, _, _, _, _, _, _, _, _).
 get_attr_value(ID, 10, A10) :- football_situation(ID, _, _, _, _, _, _, _, _, _, A10, _, _, _, _, _, _, _, _, _, _, _, _).
 get_attr_value(ID, 11, A11) :- football_situation(ID, _, _, _, _, _, _, _, _, _, _, A11, _, _, _, _, _, _, _, _, _, _, _).
 get_attr_value(ID, 12, A12) :- football_situation(ID, _, _, _, _, _, _, _, _, _, _, _, A12, _, _, _, _, _, _, _, _, _, _).
@@ -24,9 +24,10 @@ get_attr_value(ID, 18, A18) :- football_situation(ID, _, _, _, _, _, _, _, _, _,
 get_attr_value(ID, 19, A19) :- football_situation(ID, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, A19, _, _, _).
 get_attr_value(ID, 20, A20) :- football_situation(ID, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, A20, _, _).
 get_attr_value(ID, 21, A21) :- football_situation(ID, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, A21, _).
-
+get_dec(ID, Dec)            :- football_situation(ID, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, Dec).
 
 % Rule to get the attribute name based on index
+% TODO: Change the attribute names to f.e. match the football_situation attributes
 attribute_name(1, 'Co sie stalo?').
 attribute_name(2, 'Za jaka linie wypadla pilka?').
 attribute_name(3, 'Linia koncowa na połowie ktorej druzyny?').
@@ -49,7 +50,6 @@ attribute_name(19, 'Czy obelgi?').
 attribute_name(20, 'Kto obraził jako pierwszy?').
 attribute_name(21, 'Czy ma już żółtą kartkę?').
 
-
 % Initial attributes
-attributes([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21]).
-%attributes([1, 2]).
+%attributes([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21]).
+attributes([1, 2]).
