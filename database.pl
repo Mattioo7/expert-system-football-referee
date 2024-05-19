@@ -122,8 +122,8 @@ attribute_name( 5, ' 5 Czy podanie za linią obrony?').
 attribute_name( 6, ' 6 Adresat podania jest dalej od bramki przeciwnika niż obrońcy drużyny przeciwnej?').
 attribute_name( 7, ' 7 Która dużyna wykonała podanie?').
 attribute_name( 8, ' 8 Czy kontakt graczy zgodny z przepisami?').
-attribute_name( 9, ' 9 Dynamika faulu?').
-attribute_name(10, '10 Gdzie został gracz dotknięty?').
+attribute_name( 9, ' 9 Dynamika faulu? (w skali od 1 - lekki do 10 - bardz ostry)').
+attribute_name(10, '10 Gdzie został gracz dotknięty? (w skali od 1 - miejsce mało wrażliwe do 10 - miejsce bardzo wrażliwe)').
 attribute_name(11, '11 Gdzie nastąpił (faul/zajście) ?').
 attribute_name(12, '12 Kto przekroczył przepisy?').
 attribute_name(13, '13 W czyjej bramce?').
