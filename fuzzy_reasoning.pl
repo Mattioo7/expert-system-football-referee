@@ -12,38 +12,41 @@ map_foul_location('nogi', 9).
 
 light_foul(Severity, Factor) :-
     (number(Severity), Severity =< 2 -> Factor is 10;
-     number(Severity), Severity > 2, Severity =< 4 -> Factor is 6;
-     number(Severity), Severity > 4, Severity =< 6 -> Factor is 4;
+     number(Severity), Severity > 2, Severity =< 4 -> Factor is -2 * Severity + 14;
+     number(Severity), Severity > 4, Severity =< 6 -> Factor is -3 * Severity + 18;
      number(Severity), Severity > 6 -> Factor is 0).
 
 average_foul(Severity, Factor) :-
-    (number(Severity), Severity =< 4 -> Factor is 0;
-     number(Severity), Severity > 4, Severity =< 6 -> Factor is 10;
+    (number(Severity), Severity =< 2 -> Factor is 0;
+     number(Severity), Severity > 2, Severity =< 4 -> Factor is 5 * Severity - 10;
+     number(Severity), Severity > 4, Severity =< 5 -> Factor is 10;
+     number(Severity), Severity > 5, Severity =< 6 -> Factor is -10 * Severity + 60;
      number(Severity), Severity > 6 -> Factor is 0).
 
 hard_foul(Severity, Factor) :-
-    (number(Severity), Severity =< 4 -> Factor is 0;
-     number(Severity), Severity > 4, Severity =< 6 -> Factor is 3;
-     number(Severity), Severity > 6, Severity =< 7 -> Factor is 7;
+    (number(Severity), Severity =< 3 -> Factor is 0;
+     number(Severity), Severity > 3, Severity =< 4 -> Factor is 3 * Severity - 9;
+     number(Severity), Severity > 4, Severity =< 7 -> Factor is (7 / 3) * Severity - (19 / 3);
      number(Severity), Severity > 7 -> Factor is 10).
 
 % Fuzzy membership functions for foul location
 
 head_foul(Location, Factor) :-
     (number(Location), Location =< 2 -> Factor is 10;
-     number(Location), Location > 4, Location =< 5 -> Factor is 9;
-     number(Location), Location > 5, Location =< 6 -> Factor is 6;
-     number(Location), Location > 2 -> Factor is 0).
+     number(Location), Location > 2, Location =< 5 -> Factor is (-1 / 3) * Location + (32 / 3);
+     number(Location), Location > 5, Location =< 6 -> Factor is -9 * Location + 54;
+     number(Location), Location > 6 -> Factor is 0).
 
 body_foul(Location, Factor) :-
-    (number(Location), Location =< 4 -> Factor is 0;
+    (number(Location), Location =< 4 -> Factor is 2.5 * Location;
      number(Location), Location > 4, Location =< 6 -> Factor is 10;
-     number(Location), Location > 6 -> Factor is 0).
+     number(Location), Location > 6, Location =< 8 -> Factor is -5 * Location + 40;
+     number(Location), Location > 8 -> Factor is 0).
 
 leg_foul(Location, Factor) :-
     (number(Location), Location =< 4 -> Factor is 0;
-     number(Location), Location > 4, Location =< 5 -> Factor is 7;
-     number(Location), Location > 5, Location =< 7 -> Factor is 8;
+     number(Location), Location > 4, Location =< 5 -> Factor is 7 * Location - 28;
+     number(Location), Location > 5, Location =< 7 -> Factor is 1.5 * Location - 0.5;
      number(Location), Location > 7 -> Factor is 10).
 
 % Defuzzification using the centroid method
