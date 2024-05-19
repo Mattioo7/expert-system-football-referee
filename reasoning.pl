@@ -1,20 +1,6 @@
 :- consult('database.pl').
+:- consult('attributes_helper.pl').
 
-%% Transform numeric values into categories for duration
-%transform_duration(Number, Category) :-
-%    (   Number < 7 -> Category = 'short'
-%    ;   Number < 14 -> Category = 'medium'
-%    ;   Category = 'long'
-%    ).
-%
-%% Transform numeric values into categories for price
-%transform_price(Number, Category) :-
-%    (   Number < 1500 -> Category = 'very_low'
-%    ;   Number < 3000 -> Category = 'low'
-%    ;   Number < 6000 -> Category = 'medium'
-%    ;   Number < 10000 -> Category = 'high'
-%    ;   Category = 'very_high'
-%    ).
 % Rule to check if an football_situation satisfies additional conditions.
 satisfies_conditions(_, []). % Use _ to indicate an unused variable
 satisfies_conditions(ID, [(AttrIndex, Values)|Rest]) :-
@@ -68,8 +54,8 @@ find_entries(Conditions, MatchingEntries) :-
             MatchingEntries).
 
 % Recursive loop to find the best matching football_situation
-find_matching_trip(MatchingTripID) :-
-    attributes(Attributes),
+football_referee(MatchingTripID) :-
+    question_number(Attributes),
     find_matching_trip_loop(Attributes, [], MatchingTripID).
 
 find_matching_trip_loop([], Conditions, MatchingTripID) :-
@@ -77,7 +63,7 @@ find_matching_trip_loop([], Conditions, MatchingTripID) :-
     find_entries(Conditions, MatchingEntries),
     (   MatchingEntries = [(MatchingTripID, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _)|_] ->
         true
-    ;   MatchingTripID = 'Trip not found.'
+    ;   MatchingTripID = 'Nie mozna podjac decyzji'
     ).
 
 find_matching_trip_loop(Attributes, Conditions, MatchingTripID) :-
@@ -85,19 +71,10 @@ find_matching_trip_loop(Attributes, Conditions, MatchingTripID) :-
     find_best_attribute(Attributes, Conditions, MaxAttribute),
     select(MaxAttribute, Attributes, RemainingAttributes),
     find_distinct_values(MaxAttribute, Conditions, Values),
-    attribute_name(MaxAttribute, AttributeName),
-    (   /*MaxAttribute = 1 -> format('Enter duration in days (e.g., 5): ')
-    ;   MaxAttribute = 2 -> format('Enter price in PLN (e.g., 2000): ')
-    ;   */format('Question: ~w (possible values: ~w): ', [AttributeName, Values])
-    ),
+    question(MaxAttribute, AttributeName),
+    format('Pytanie: ~w [Odp: ~w]: ', [AttributeName, Values]),
     read(UserInput),
-    (   /*MaxAttribute = 1 -> (number(UserInput) -> transform_duration(UserInput, TransformedValue) ; TransformedValue = UserInput),
-                            NewCondition = (MaxAttribute, [TransformedValue])
-    ;   MaxAttribute = 2 -> (number(UserInput) -> transform_price(UserInput, TransformedValue) ; TransformedValue = UserInput),
-                            NewCondition = (MaxAttribute, [TransformedValue])
-    ;   is_list(UserInput) -> NewCondition = (MaxAttribute, UserInput)
-    ;   */NewCondition = (MaxAttribute, [UserInput])
-    ),
+    NewCondition = (MaxAttribute, [UserInput]),
     append(Conditions, [NewCondition], NewConditions),
 
     % Check for collisions and inconsistencies
