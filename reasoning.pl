@@ -1,5 +1,6 @@
 :- consult('database.pl').
 :- consult('attributes_helper.pl').
+:- consult('fuzzy_reasoning.pl').
 
 football_referee(Decision) :-
     question_number(QuestionNumber),
