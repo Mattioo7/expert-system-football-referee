@@ -2,9 +2,9 @@
 
 main :-
     show_welcome_message,
-    sleep(1),
+    sleep(0),
     show_instructions,
-    sleep(2),
+    sleep(0),
     football_referee(Decision),
     show_analysis_message,
     sleep(1),
