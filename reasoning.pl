@@ -1,20 +1,7 @@
 :- consult('database.pl').
+:- consult('fuzzy_reasoning.pl').
 
-%% Transform numeric values into categories for duration
-%transform_duration(Number, Category) :-
-%    (   Number < 7 -> Category = 'short'
-%    ;   Number < 14 -> Category = 'medium'
-%    ;   Category = 'long'
-%    ).
-%
-%% Transform numeric values into categories for price
-%transform_price(Number, Category) :-
-%    (   Number < 1500 -> Category = 'very_low'
-%    ;   Number < 3000 -> Category = 'low'
-%    ;   Number < 6000 -> Category = 'medium'
-%    ;   Number < 10000 -> Category = 'high'
-%    ;   Category = 'very_high'
-%    ).
+
 % Rule to check if an football_situation satisfies additional conditions.
 satisfies_conditions(_, []). % Use _ to indicate an unused variable
 satisfies_conditions(ID, [(AttrIndex, Values)|Rest]) :-
@@ -86,18 +73,19 @@ find_matching_trip_loop(Attributes, Conditions, MatchingTripID) :-
     select(MaxAttribute, Attributes, RemainingAttributes),
     find_distinct_values(MaxAttribute, Conditions, Values),
     attribute_name(MaxAttribute, AttributeName),
-    (   /*MaxAttribute = 1 -> format('Enter duration in days (e.g., 5): ')
-    ;   MaxAttribute = 2 -> format('Enter price in PLN (e.g., 2000): ')
-    ;   */format('Question: ~w (possible values: ~w): ', [AttributeName, Values])
+    (   MaxAttribute = 9 -> format('Dynamika faulu?: ')
+    ;   MaxAttribute = 10 -> format('Gdzie został gracz dotknięty?')
+    ;   format('Question: ~w (possible values: ~w): ', [AttributeName, Values])
     ),
     read(UserInput),
-    (   /*MaxAttribute = 1 -> (number(UserInput) -> transform_duration(UserInput, TransformedValue) ; TransformedValue = UserInput),
+    (   MaxAttribute = 9 -> (number(UserInput) -> evaluate_foul_severity(UserInput, TransformedValue); TransformedValue = UserInput),
                             NewCondition = (MaxAttribute, [TransformedValue])
-    ;   MaxAttribute = 2 -> (number(UserInput) -> transform_price(UserInput, TransformedValue) ; TransformedValue = UserInput),
+    ;   MaxAttribute = 10 -> (number(UserInput) -> evaluate_foul_location(UserInput, TransformedValue) ; TransformedValue = UserInput),
                             NewCondition = (MaxAttribute, [TransformedValue])
     ;   is_list(UserInput) -> NewCondition = (MaxAttribute, UserInput)
-    ;   */NewCondition = (MaxAttribute, [UserInput])
+    ;   NewCondition = (MaxAttribute, [UserInput])
     ),
+    write(NewCondition), nl,
     append(Conditions, [NewCondition], NewConditions),
 
     % Check for collisions and inconsistencies
