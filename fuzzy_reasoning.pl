@@ -8,7 +8,6 @@ map_foul_location('glowa', 1).
 map_foul_location('korpus', 5).
 map_foul_location('nogi', 9).
 
-
 % Fuzzy membership functions for foul severity
 
 light_foul(Severity, Factor) :-
@@ -30,7 +29,6 @@ hard_foul(Severity, Factor) :-
      number(Severity), Severity > 4, Severity =< 7 -> Factor is (7 / 3) * Severity - (19 / 3);
      number(Severity), Severity > 7 -> Factor is 10).
 
-
 % Fuzzy membership functions for foul location
 
 head_foul(Location, Factor) :-
@@ -51,7 +49,6 @@ leg_foul(Location, Factor) :-
      number(Location), Location > 5, Location =< 7 -> Factor is (3 / 2) * Location - (1 / 2);
      number(Location), Location > 7 -> Factor is 10).
 
-
 % Defuzzification using the centroid method
 
 defuzzy_center(Factors, FactorValues, Result) :-
@@ -69,7 +66,6 @@ sum_vector_2([H_L|T_L], [H_R|T_R], P) :-
     sum_vector_2(T_L, T_R, R),
     P is (H_L * H_R) + R.
 
-
 % Evaluating the severity factor
 
 evaluate_foul_severity(Severity, Factor) :-
@@ -84,7 +80,6 @@ foul_severity_factor(Severity, Factor) :-
     map_foul_severity('przecietny', M2),
     map_foul_severity('ostry', M3),
     defuzzy_center([F1, F2, F3], [M1, M2, M3], Factor).
-
 
 % Evaluating the location factor
 
