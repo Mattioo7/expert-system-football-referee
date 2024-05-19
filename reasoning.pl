@@ -73,8 +73,8 @@ find_matching_trip_loop(Attributes, Conditions, MatchingTripID) :-
     select(MaxAttribute, Attributes, RemainingAttributes),
     find_distinct_values(MaxAttribute, Conditions, Values),
     attribute_name(MaxAttribute, AttributeName),
-    (   MaxAttribute = 9 -> format('Dynamika faulu?: ')
-    ;   MaxAttribute = 10 -> format('Gdzie został gracz dotknięty?')
+    (   MaxAttribute = 9 -> format(' 9 Dynamika faulu? (w skali od 1 - lekki do 10 - bardz ostry): ')
+    ;   MaxAttribute = 10 -> format('10 Gdzie został gracz dotknięty? (w skali od 1 - miejsce mało wrażliwe do 10 - miejsce bardzo wrażliwe): ')
     ;   format('Question: ~w (possible values: ~w): ', [AttributeName, Values])
     ),
     read(UserInput),

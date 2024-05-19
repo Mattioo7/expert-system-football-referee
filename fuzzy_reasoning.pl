@@ -31,8 +31,8 @@ hard_foul(Severity, Factor) :-
 
 head_foul(Location, Factor) :-
     (number(Location), Location =< 2 -> Factor is 10;
-     number(Severity), Severity > 4, Severity =< 5 -> Factor is 9;
-     number(Severity), Severity > 5, Severity =< 6 -> Factor is 6;
+     number(Location), Location > 4, Location =< 5 -> Factor is 9;
+     number(Location), Location > 5, Location =< 6 -> Factor is 6;
      number(Location), Location > 2 -> Factor is 0).
 
 body_foul(Location, Factor) :-
@@ -42,8 +42,8 @@ body_foul(Location, Factor) :-
 
 leg_foul(Location, Factor) :-
     (number(Location), Location =< 4 -> Factor is 0;
-     number(Severity), Severity > 4, Severity =< 5 -> Factor is 7;
-     number(Severity), Severity > 5, Severity =< 7 -> Factor is 8;
+     number(Location), Location > 4, Location =< 5 -> Factor is 7;
+     number(Location), Location > 5, Location =< 7 -> Factor is 8;
      number(Location), Location > 7 -> Factor is 10).
 
 % Defuzzification using the centroid method
