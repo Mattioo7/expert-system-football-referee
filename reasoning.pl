@@ -15,7 +15,6 @@
 %    ;   Number < 10000 -> Category = 'high'
 %    ;   Category = 'very_high'
 %    ).
-
 % Rule to check if an football_situation satisfies additional conditions.
 satisfies_conditions(_, []). % Use _ to indicate an unused variable
 satisfies_conditions(ID, [(AttrIndex, Values)|Rest]) :-
