@@ -46,7 +46,7 @@ body_foul(Location, Factor) :-
 leg_foul(Location, Factor) :-
     (number(Location), Location =< 4 -> Factor is 0;
      number(Location), Location > 4, Location =< 5 -> Factor is 7 * Location - 28;
-     number(Location), Location > 5, Location =< 7 -> Factor is (3 / 2) * Location - (1 / 2);
+     number(Location), Location > 5, Location =< 7 -> Factor is 1.5 * Location - 0.5;
      number(Location), Location > 7 -> Factor is 10).
 
 % Defuzzification using the centroid method
