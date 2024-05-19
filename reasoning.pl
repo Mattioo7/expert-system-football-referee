@@ -1,5 +1,21 @@
 :- consult('database.pl').
 
+%% Transform numeric values into categories for duration
+%transform_duration(Number, Category) :-
+%    (   Number < 7 -> Category = 'short'
+%    ;   Number < 14 -> Category = 'medium'
+%    ;   Category = 'long'
+%    ).
+%
+%% Transform numeric values into categories for price
+%transform_price(Number, Category) :-
+%    (   Number < 1500 -> Category = 'very_low'
+%    ;   Number < 3000 -> Category = 'low'
+%    ;   Number < 6000 -> Category = 'medium'
+%    ;   Number < 10000 -> Category = 'high'
+%    ;   Category = 'very_high'
+%    ).
+
 % Rule to check if an football_situation satisfies additional conditions.
 satisfies_conditions(_, []). % Use _ to indicate an unused variable
 satisfies_conditions(ID, [(AttrIndex, Values)|Rest]) :-
@@ -38,7 +54,6 @@ find_distinct_values(AttrIndex, Conditions, Values) :-
     sort(AllValues, Values).
 
 % Rule to find distinct countries while satisfying conditions
-% TODO: Is that needed?
 find_distinct_countries(Conditions, Countries) :-
     findall(Dec,
             (football_situation(ID, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, Dec),
@@ -74,7 +89,7 @@ find_matching_trip_loop(Attributes, Conditions, MatchingTripID) :-
     attribute_name(MaxAttribute, AttributeName),
     (   /*MaxAttribute = 1 -> format('Enter duration in days (e.g., 5): ')
     ;   MaxAttribute = 2 -> format('Enter price in PLN (e.g., 2000): ')
-    ;   */format('Select the ~w (possible values: ~w, input as a list [value1, value2, ...] or a single value): ', [AttributeName, Values])
+    ;   */format('Question: ~w (possible values: ~w): ', [AttributeName, Values])
     ),
     read(UserInput),
     (   /*MaxAttribute = 1 -> (number(UserInput) -> transform_duration(UserInput, TransformedValue) ; TransformedValue = UserInput),
