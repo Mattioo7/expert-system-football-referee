@@ -2,7 +2,7 @@
 
 main :-
     show_welcome_message,
-    sleep(2),
+    sleep(1),
     show_instructions,
     sleep(2),
     football_referee(Decision),
