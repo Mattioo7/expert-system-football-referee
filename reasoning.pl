@@ -1,5 +1,6 @@
 :- consult('database.pl').
 :- consult('attributes_helper.pl').
+:- consult('fuzzy_reasoning.pl').
 
 football_referee(Decision) :-
     question_number(QuestionNumber),
@@ -28,10 +29,21 @@ make_decision(Attributes, Conditions, Decision) :-
 
 ask_user_for_input(BestAttribute, Values, Conditions, NewConditions) :-
     question(BestAttribute, AttributeName),
-    format('Pytanie: ~w [Odp: ~w]: ', [AttributeName, Values]),
+    (   MaxAttribute = 9 -> format(' 9 Dynamika faulu? (w skali od 1 - lekki do 10 - bardz ostry): ')
+    ;   MaxAttribute = 10 -> format('10 Gdzie został gracz dotknięty? (w skali od 1 - miejsce mało wrażliwe do 10 - miejsce bardzo wrażliwe): ')
+    ;   format('Question: ~w (possible values: ~w): ', [AttributeName, Values])
+    ),
     read(UserInput),
-    NewCondition = (BestAttribute, [UserInput]),
-    append(Conditions, [NewCondition], NewConditions).
+    (   MaxAttribute = 9 -> (number(UserInput) -> evaluate_foul_severity(UserInput, TransformedValue); TransformedValue = UserInput),
+                            NewCondition = (MaxAttribute, [TransformedValue])
+    ;   MaxAttribute = 10 -> (number(UserInput) -> evaluate_foul_location(UserInput, TransformedValue) ; TransformedValue = UserInput),
+                            NewCondition = (MaxAttribute, [TransformedValue])
+    ;   is_list(UserInput) -> NewCondition = (MaxAttribute, UserInput)
+    ;   NewCondition = (MaxAttribute, [UserInput])
+    ),
+    append(Conditions, [NewCondition], NewConditions),
+
+
 
 meets_criteria(_, []).
 meets_criteria(ID, [(ElementIdx, Values)|Rest]) :-
