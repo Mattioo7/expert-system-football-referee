@@ -48,7 +48,7 @@ Pytania:,Co się stało?,Za jaką linię wypadła piłka?,Linia końcowa na poł
 46,Piłka poza boiskiem,Linia końcowa,Gospodarzy,Gości,,,,,,,,,,,,,,,,,,Wznowienie od bramki
 47,Piłka poza boiskiem,Linia końcowa,Gospodarzy,Gospodarzy,,,,,,,,,,,,,,,,,,Rzut rożny dla gości
 48,Piłka poza boiskiem,Linia końcowa,Gości,Gospodarzy,,,,,,,,,,,,,,,,,,Wznowienie od bramki
-49,Piłka poza boiskiem,Linia końcowa,Gości,Gości,,,,,,,,,,,,,,,,,,Rzut gości dla gospodarzy
+49,Piłka poza boiskiem,Linia końcowa,Gości,Gości,,,,,,,,,,,,,,,,,,Rzut rożny dla gospodarzy
 50,Podanie,,,,Nie,,,,,,,,,,,,,,,,,Brak reakcji
 51,Podanie,,,,Tak,Tak,,,,,,,,,,,,,,,,Brak reakcji
 52,Podanie,,,,Tak,Nie,Gospodarzy,,,,,,,,,,,,,,,Spalony drużyny gospodarzy
@@ -58,56 +58,86 @@ Pytania:,Co się stało?,Za jaką linię wypadła piłka?,Linia końcowa na poł
 ,,,,,,,,,,,,,,,,,,,,,,
 56,Kontakt graczy,,,,,,,Tak,,,,,,,,,,,,,,Brak reakcji
 57,Kontakt graczy,,,,,,,Nie,Lekki,Nogi,Pole karne gości,Gospodarz,,,,,,,,,,Rzut wolny dla gości
-58,Kontakt graczy,,,,,,,Nie,Lekki,Nogi,Pole karne gości,Gość,,,,,,,,,,Żółta kartka dla gości i rzut karny
-59,Kontakt graczy,,,,,,,Nie,Lekki,Nogi,Pole karne gospodarzy,Gospodarz,,,,,,,,,,Żółta kartka dla gospodarzy i rzut karny
-60,Kontakt graczy,,,,,,,Nie,Lekki,Nogi,Pole karne gospodarzy,Gość,,,,,,,,,,Rzut wolny dla gospodarzy
-61,Kontakt graczy,,,,,,,Nie,Lekki,Nogi,Poza polem karnym,Gospodarz,,,,,,,,,,Rzut wolny dla gości
-62,Kontakt graczy,,,,,,,Nie,Lekki,Nogi,Poza polem karnym,Gość,,,,,,,,,,Rzut wolny dla gospodarzy
-63,Kontakt graczy,,,,,,,Nie,Lekki,Korpus,Pole karne gości,Gospodarz,,,,,,,,,,Rzut wolny dla gości
-64,Kontakt graczy,,,,,,,Nie,Lekki,Korpus,Pole karne gości,Gość,,,,,,,,,,Żółta kartka dla gości i rzut karny
-65,Kontakt graczy,,,,,,,Nie,Lekki,Korpus,Pole karne gospodarzy,Gospodarz,,,,,,,,,,Żółta kartka dla gospodarzy i rzut karny
-66,Kontakt graczy,,,,,,,Nie,Lekki,Korpus,Pole karne gospodarzy,Gość,,,,,,,,,,Rzut wolny dla gospodarzy
-67,Kontakt graczy,,,,,,,Nie,Lekki,Korpus,Poza polem karnym,Gospodarz,,,,,,,,,,Rzut wolny dla gości
-68,Kontakt graczy,,,,,,,Nie,Lekki,Korpus,Poza polem karnym,Gość,,,,,,,,,,Rzut wolny dla gospodarzy
-69,Kontakt graczy,,,,,,,Nie,Lekki,Głowa,Pole karne gości,Gospodarz,,,,,,,,,,Żółta kartka dla gospodarzy i rzut wolny
-70,Kontakt graczy,,,,,,,Nie,Lekki,Głowa,Pole karne gości,Gość,,,,,,,,,,Żółta kartka dla gości i rzut karny
-71,Kontakt graczy,,,,,,,Nie,Lekki,Głowa,Pole karne gospodarzy,Gospodarz,,,,,,,,,,Żółta kartka dla gospodarzy i rzut karny
-72,Kontakt graczy,,,,,,,Nie,Lekki,Głowa,Pole karne gospodarzy,Gość,,,,,,,,,,Żółta kartka dla gości i rzut wolny
-73,Kontakt graczy,,,,,,,Nie,Lekki,Głowa,Poza polem karnym,Gospodarz,,,,,,,,,,Rzut wolny dla gości
-74,Kontakt graczy,,,,,,,Nie,Lekki,Głowa,Poza polem karnym,Gość,,,,,,,,,,Rzut wolny dla gospodarzy
-75,Kontakt graczy,,,,,,,Nie,Przeciętny,Nogi,Pole karne gości,Gospodarz,,,,,,,,,,Żółta kartka dla gospodarzy i rzut wolny
-76,Kontakt graczy,,,,,,,Nie,Przeciętny,Nogi,Pole karne gości,Gość,,,,,,,,,,Żółta kartka dla gości i rzut karny
-77,Kontakt graczy,,,,,,,Nie,Przeciętny,Nogi,Pole karne gospodarzy,Gospodarz,,,,,,,,,,Żółta kartka dla gospodarzy i rzut karny
-78,Kontakt graczy,,,,,,,Nie,Przeciętny,Nogi,Pole karne gospodarzy,Gość,,,,,,,,,,Żółta kartka dla gości i rzut wolny
-79,Kontakt graczy,,,,,,,Nie,Przeciętny,Nogi,Poza polem karnym,Gospodarz,,,,,,,,,,Rzut wolny dla gości
-80,Kontakt graczy,,,,,,,Nie,Przeciętny,Nogi,Poza polem karnym,Gość,,,,,,,,,,Rzut wolny dla gospodarzy
-81,Kontakt graczy,,,,,,,Nie,Przeciętny,Korpus,Pole karne gości,Gospodarz,,,,,,,,,,Żółta kartka dla gospodarzy i rzut wolny
-82,Kontakt graczy,,,,,,,Nie,Przeciętny,Korpus,Pole karne gości,Gość,,,,,,,,,,Żółta kartka dla gości i rzut karny
-83,Kontakt graczy,,,,,,,Nie,Przeciętny,Korpus,Pole karne gospodarzy,Gospodarz,,,,,,,,,,Żółta kartka dla gospodarzy i rzut karny
-84,Kontakt graczy,,,,,,,Nie,Przeciętny,Korpus,Pole karne gospodarzy,Gość,,,,,,,,,,Żółta kartka dla gości i rzut wolny
-85,Kontakt graczy,,,,,,,Nie,Przeciętny,Korpus,Poza polem karnym,Gospodarz,,,,,,,,,,Rzut wolny dla gości
-86,Kontakt graczy,,,,,,,Nie,Przeciętny,Korpus,Poza polem karnym,Gość,,,,,,,,,,Rzut wolny dla gospodarzy
-87,Kontakt graczy,,,,,,,Nie,Przeciętny,Głowa,Pole karne gości,Gospodarz,,,,,,,,,,Żółta kartka dla gospodarzy i rzut wolny
-88,Kontakt graczy,,,,,,,Nie,Przeciętny,Głowa,Pole karne gości,Gość,,,,,,,,,,Żółta kartka dla gości i rzut karny
-89,Kontakt graczy,,,,,,,Nie,Przeciętny,Głowa,Pole karne gospodarzy,Gospodarz,,,,,,,,,,Czerwona kartka dla gospodarzy i rzut karny
-90,Kontakt graczy,,,,,,,Nie,Przeciętny,Głowa,Pole karne gospodarzy,Gość,,,,,,,,,,Żółta kartka dla gości i rzut wolny
-91,Kontakt graczy,,,,,,,Nie,Przeciętny,Głowa,Poza polem karnym,Gospodarz,,,,,,,,,,Żółta kartka dla gospodarzy i rzut wolny
-92,Kontakt graczy,,,,,,,Nie,Przeciętny,Głowa,Poza polem karnym,Gość,,,,,,,,,,Żółta kartka dla gości i rzut wolny
-93,Kontakt graczy,,,,,,,Nie,Ostry,Nogi,Pole karne gości,Gospodarz,,,,,,,,,,Żółta kartka dla gospodarzy i rzut wolny
-94,Kontakt graczy,,,,,,,Nie,Ostry,Nogi,Pole karne gości,Gość,,,,,,,,,,Żółta kartka dla gości i rzut karny
-95,Kontakt graczy,,,,,,,Nie,Ostry,Nogi,Pole karne gospodarzy,Gospodarz,,,,,,,,,,Czerwona kartka dla gospodarzy i rzut karny
-96,Kontakt graczy,,,,,,,Nie,Ostry,Nogi,Pole karne gospodarzy,Gość,,,,,,,,,,Żółta kartka dla gości i rzut wolny
-97,Kontakt graczy,,,,,,,Nie,Ostry,Nogi,Poza polem karnym,Gospodarz,,,,,,,,,,Żółta kartka dla gospodarzy i rzut wolny
-98,Kontakt graczy,,,,,,,Nie,Ostry,Nogi,Poza polem karnym,Gość,,,,,,,,,,Żółta kartka dla gości i rzut wolny
-99,Kontakt graczy,,,,,,,Nie,Ostry,Korpus,Pole karne gości,Gospodarz,,,,,,,,,,Żółta kartka dla gospodarzy i rzut wolny
-100,Kontakt graczy,,,,,,,Nie,Ostry,Korpus,Pole karne gości,Gość,,,,,,,,,,Żółta kartka dla gości i rzut karny
-101,Kontakt graczy,,,,,,,Nie,Ostry,Korpus,Pole karne gospodarzy,Gospodarz,,,,,,,,,,Czerwona kartka dla gospodarzy i rzut karny
-102,Kontakt graczy,,,,,,,Nie,Ostry,Korpus,Pole karne gospodarzy,Gość,,,,,,,,,,Żółta kartka dla gości i rzut wolny
-103,Kontakt graczy,,,,,,,Nie,Ostry,Korpus,Poza polem karnym,Gospodarz,,,,,,,,,,Żółta kartka dla gospodarzy i rzut wolny
-104,Kontakt graczy,,,,,,,Nie,Ostry,Korpus,Poza polem karnym,Gość,,,,,,,,,,Czerwona kartka dla gości i rzut wolny
-105,Kontakt graczy,,,,,,,Nie,Ostry,Głowa,Pole karne gości,Gospodarz,,,,,,,,,,Czerwona kartka dla gospodarzy i rzut wolny
-106,Kontakt graczy,,,,,,,Nie,Ostry,Głowa,Pole karne gości,Gość,,,,,,,,,,Czerwona kartka dla gości i rzut karny
-107,Kontakt graczy,,,,,,,Nie,Ostry,Głowa,Pole karne gospodarzy,Gospodarz,,,,,,,,,,Czerwona kartka dla gospodarzy i rzut karny
-108,Kontakt graczy,,,,,,,Nie,Ostry,Głowa,Pole karne gospodarzy,Gość,,,,,,,,,,Czerwona kartka dla gości i rzut wolny
-109,Kontakt graczy,,,,,,,Nie,Ostry,Głowa,Poza polem karnym,Gospodarz,,,,,,,,,,Czerwona kartka dla gospodarzy i rzut wolny
-110,Kontakt graczy,,,,,,,Nie,Ostry,Głowa,Poza polem karnym,Gość,,,,,,,,,,Czerwona kartka dla gości i rzut wolny
+58,Kontakt graczy,,,,,,,Nie,Lekki,Nogi,Pole karne gości,Gość,,,,,,,,,Nie,Żółta kartka dla gości i rzut karny
+59,Kontakt graczy,,,,,,,Nie,Lekki,Nogi,Pole karne gości,Gość,,,,,,,,,Tak,Czerwona kartka dla gości i rzut karny
+60,Kontakt graczy,,,,,,,Nie,Lekki,Nogi,Pole karne gospodarzy,Gospodarz,,,,,,,,,Nie,Żółta kartka dla gospodarzy i rzut karny
+61,Kontakt graczy,,,,,,,Nie,Lekki,Nogi,Pole karne gospodarzy,Gospodarz,,,,,,,,,Tak,Czerwona kartka dla gospodarzy i rzut karny
+62,Kontakt graczy,,,,,,,Nie,Lekki,Nogi,Pole karne gospodarzy,Gość,,,,,,,,,,Rzut wolny dla gospodarzy
+63,Kontakt graczy,,,,,,,Nie,Lekki,Nogi,Poza polem karnym,Gospodarz,,,,,,,,,,Rzut wolny dla gości
+64,Kontakt graczy,,,,,,,Nie,Lekki,Nogi,Poza polem karnym,Gość,,,,,,,,,,Rzut wolny dla gospodarzy
+65,Kontakt graczy,,,,,,,Nie,Lekki,Korpus,Pole karne gości,Gospodarz,,,,,,,,,,Rzut wolny dla gości
+66,Kontakt graczy,,,,,,,Nie,Lekki,Korpus,Pole karne gości,Gość,,,,,,,,,Nie,Żółta kartka dla gości i rzut karny
+67,Kontakt graczy,,,,,,,Nie,Lekki,Korpus,Pole karne gości,Gość,,,,,,,,,Tak,Czerwona kartka dla gości i rzut karny
+68,Kontakt graczy,,,,,,,Nie,Lekki,Korpus,Pole karne gospodarzy,Gospodarz,,,,,,,,,Nie,Żółta kartka dla gospodarzy i rzut karny
+69,Kontakt graczy,,,,,,,Nie,Lekki,Korpus,Pole karne gospodarzy,Gospodarz,,,,,,,,,Tak,Czerwona kartka dla gospodarzy i rzut karny
+70,Kontakt graczy,,,,,,,Nie,Lekki,Korpus,Pole karne gospodarzy,Gość,,,,,,,,,,Rzut wolny dla gospodarzy
+71,Kontakt graczy,,,,,,,Nie,Lekki,Korpus,Poza polem karnym,Gospodarz,,,,,,,,,,Rzut wolny dla gości
+72,Kontakt graczy,,,,,,,Nie,Lekki,Korpus,Poza polem karnym,Gość,,,,,,,,,,Rzut wolny dla gospodarzy
+73,Kontakt graczy,,,,,,,Nie,Lekki,Głowa,Pole karne gości,Gospodarz,,,,,,,,,Nie,Żółta kartka dla gospodarzy i rzut wolny
+74,Kontakt graczy,,,,,,,Nie,Lekki,Głowa,Pole karne gości,Gospodarz,,,,,,,,,Tak,Czerwona kartka dla gospodarzy i rzut wolny
+75,Kontakt graczy,,,,,,,Nie,Lekki,Głowa,Pole karne gości,Gość,,,,,,,,,Nie,Żółta kartka dla gości i rzut karny
+76,Kontakt graczy,,,,,,,Nie,Lekki,Głowa,Pole karne gości,Gość,,,,,,,,,Tak,Czerwona kartka dla gości i rzut karny
+77,Kontakt graczy,,,,,,,Nie,Lekki,Głowa,Pole karne gospodarzy,Gospodarz,,,,,,,,,Nie,Żółta kartka dla gospodarzy i rzut karny
+78,Kontakt graczy,,,,,,,Nie,Lekki,Głowa,Pole karne gospodarzy,Gospodarz,,,,,,,,,Tak,Czerwona kartka dla gospodarzy i rzut karny
+79,Kontakt graczy,,,,,,,Nie,Lekki,Głowa,Pole karne gospodarzy,Gość,,,,,,,,,Nie,Żółta kartka dla gości i rzut wolny
+80,Kontakt graczy,,,,,,,Nie,Lekki,Głowa,Pole karne gospodarzy,Gość,,,,,,,,,Tak,Czerwona kartka dla gości i rzut wolny
+81,Kontakt graczy,,,,,,,Nie,Lekki,Głowa,Poza polem karnym,Gospodarz,,,,,,,,,,Rzut wolny dla gości
+82,Kontakt graczy,,,,,,,Nie,Lekki,Głowa,Poza polem karnym,Gość,,,,,,,,,,Rzut wolny dla gospodarzy
+83,Kontakt graczy,,,,,,,Nie,Przeciętny,Nogi,Pole karne gości,Gospodarz,,,,,,,,,Nie,Żółta kartka dla gospodarzy i rzut wolny
+84,Kontakt graczy,,,,,,,Nie,Przeciętny,Nogi,Pole karne gości,Gospodarz,,,,,,,,,Tak,Czerwona kartka dla gospodarzy i rzut wolny
+85,Kontakt graczy,,,,,,,Nie,Przeciętny,Nogi,Pole karne gości,Gość,,,,,,,,,Nie,Żółta kartka dla gości i rzut karny
+86,Kontakt graczy,,,,,,,Nie,Przeciętny,Nogi,Pole karne gości,Gość,,,,,,,,,Tak,Czerwona kartka dla gości i rzut karny
+87,Kontakt graczy,,,,,,,Nie,Przeciętny,Nogi,Pole karne gospodarzy,Gospodarz,,,,,,,,,Nie,Żółta kartka dla gospodarzy i rzut karny
+88,Kontakt graczy,,,,,,,Nie,Przeciętny,Nogi,Pole karne gospodarzy,Gospodarz,,,,,,,,,Tak,Czerwona kartka dla gospodarzy i rzut karny
+89,Kontakt graczy,,,,,,,Nie,Przeciętny,Nogi,Pole karne gospodarzy,Gość,,,,,,,,,Nie,Żółta kartka dla gości i rzut wolny
+90,Kontakt graczy,,,,,,,Nie,Przeciętny,Nogi,Pole karne gospodarzy,Gość,,,,,,,,,Tak,Czerwona kartka dla gości i rzut wolny
+91,Kontakt graczy,,,,,,,Nie,Przeciętny,Nogi,Poza polem karnym,Gospodarz,,,,,,,,,,Rzut wolny dla gości
+92,Kontakt graczy,,,,,,,Nie,Przeciętny,Nogi,Poza polem karnym,Gość,,,,,,,,,,Rzut wolny dla gospodarzy
+93,Kontakt graczy,,,,,,,Nie,Przeciętny,Korpus,Pole karne gości,Gospodarz,,,,,,,,,Nie,Żółta kartka dla gospodarzy i rzut wolny
+94,Kontakt graczy,,,,,,,Nie,Przeciętny,Korpus,Pole karne gości,Gospodarz,,,,,,,,,Tak,Czerwona kartka dla gospodarzy i rzut wolny
+95,Kontakt graczy,,,,,,,Nie,Przeciętny,Korpus,Pole karne gości,Gość,,,,,,,,,Nie,Żółta kartka dla gości i rzut karny
+96,Kontakt graczy,,,,,,,Nie,Przeciętny,Korpus,Pole karne gości,Gość,,,,,,,,,Tak,Czerwona kartka dla gości i rzut karny
+97,Kontakt graczy,,,,,,,Nie,Przeciętny,Korpus,Pole karne gospodarzy,Gospodarz,,,,,,,,,Nie,Żółta kartka dla gospodarzy i rzut karny
+98,Kontakt graczy,,,,,,,Nie,Przeciętny,Korpus,Pole karne gospodarzy,Gospodarz,,,,,,,,,Tak,Czerwona kartka dla gospodarzy i rzut karny
+99,Kontakt graczy,,,,,,,Nie,Przeciętny,Korpus,Pole karne gospodarzy,Gość,,,,,,,,,Nie,Żółta kartka dla gości i rzut wolny
+100,Kontakt graczy,,,,,,,Nie,Przeciętny,Korpus,Pole karne gospodarzy,Gość,,,,,,,,,Tak,Czerwona kartka dla gości i rzut wolny
+101,Kontakt graczy,,,,,,,Nie,Przeciętny,Korpus,Poza polem karnym,Gospodarz,,,,,,,,,,Rzut wolny dla gości
+102,Kontakt graczy,,,,,,,Nie,Przeciętny,Korpus,Poza polem karnym,Gość,,,,,,,,,,Rzut wolny dla gospodarzy
+103,Kontakt graczy,,,,,,,Nie,Przeciętny,Głowa,Pole karne gości,Gospodarz,,,,,,,,,Nie,Żółta kartka dla gospodarzy i rzut wolny
+104,Kontakt graczy,,,,,,,Nie,Przeciętny,Głowa,Pole karne gości,Gospodarz,,,,,,,,,Tak,Czerwona kartka dla gospodarzy i rzut wolny
+105,Kontakt graczy,,,,,,,Nie,Przeciętny,Głowa,Pole karne gości,Gość,,,,,,,,,Nie,Żółta kartka dla gości i rzut karny
+106,Kontakt graczy,,,,,,,Nie,Przeciętny,Głowa,Pole karne gości,Gość,,,,,,,,,Tak,Czerwona kartka dla gości i rzut karny
+107,Kontakt graczy,,,,,,,Nie,Przeciętny,Głowa,Pole karne gospodarzy,Gospodarz,,,,,,,,,,Czerwona kartka dla gospodarzy i rzut karny
+108,Kontakt graczy,,,,,,,Nie,Przeciętny,Głowa,Pole karne gospodarzy,Gość,,,,,,,,,Nie,Żółta kartka dla gości i rzut wolny
+109,Kontakt graczy,,,,,,,Nie,Przeciętny,Głowa,Pole karne gospodarzy,Gość,,,,,,,,,Tak,Czerwona kartka dla gości i rzut wolny
+110,Kontakt graczy,,,,,,,Nie,Przeciętny,Głowa,Poza polem karnym,Gospodarz,,,,,,,,,Nie,Żółta kartka dla gospodarzy i rzut wolny
+111,Kontakt graczy,,,,,,,Nie,Przeciętny,Głowa,Poza polem karnym,Gospodarz,,,,,,,,,Tak,Czerwona kartka dla gospodarzy i rzut wolny
+112,Kontakt graczy,,,,,,,Nie,Przeciętny,Głowa,Poza polem karnym,Gość,,,,,,,,,Nie,Żółta kartka dla gości i rzut wolny
+113,Kontakt graczy,,,,,,,Nie,Przeciętny,Głowa,Poza polem karnym,Gość,,,,,,,,,Tak,Czerwona kartka dla gości i rzut wolny
+114,Kontakt graczy,,,,,,,Nie,Ostry,Nogi,Pole karne gości,Gospodarz,,,,,,,,,Nie,Żółta kartka dla gospodarzy i rzut wolny
+115,Kontakt graczy,,,,,,,Nie,Ostry,Nogi,Pole karne gości,Gospodarz,,,,,,,,,Tak,Czerwona kartka dla gospodarzy i rzut wolny
+116,Kontakt graczy,,,,,,,Nie,Ostry,Nogi,Pole karne gości,Gość,,,,,,,,,Nie,Żółta kartka dla gości i rzut karny
+117,Kontakt graczy,,,,,,,Nie,Ostry,Nogi,Pole karne gości,Gość,,,,,,,,,Tak,Czerwona kartka dla gości i rzut karny
+118,Kontakt graczy,,,,,,,Nie,Ostry,Nogi,Pole karne gospodarzy,Gospodarz,,,,,,,,,,Czerwona kartka dla gospodarzy i rzut karny
+119,Kontakt graczy,,,,,,,Nie,Ostry,Nogi,Pole karne gospodarzy,Gość,,,,,,,,,Nie,Żółta kartka dla gości i rzut wolny
+120,Kontakt graczy,,,,,,,Nie,Ostry,Nogi,Pole karne gospodarzy,Gość,,,,,,,,,Tak,Czerwona kartka dla gości i rzut wolny
+121,Kontakt graczy,,,,,,,Nie,Ostry,Nogi,Poza polem karnym,Gospodarz,,,,,,,,,Nie,Żółta kartka dla gospodarzy i rzut wolny
+122,Kontakt graczy,,,,,,,Nie,Ostry,Nogi,Poza polem karnym,Gospodarz,,,,,,,,,Tak,Czerwona kartka dla gospodarzy i rzut wolny
+123,Kontakt graczy,,,,,,,Nie,Ostry,Nogi,Poza polem karnym,Gość,,,,,,,,,Nie,Żółta kartka dla gości i rzut wolny
+124,Kontakt graczy,,,,,,,Nie,Ostry,Nogi,Poza polem karnym,Gość,,,,,,,,,Tak,Czerwona kartka dla gości i rzut wolny
+125,Kontakt graczy,,,,,,,Nie,Ostry,Korpus,Pole karne gości,Gospodarz,,,,,,,,,Nie,Żółta kartka dla gospodarzy i rzut wolny
+126,Kontakt graczy,,,,,,,Nie,Ostry,Korpus,Pole karne gości,Gospodarz,,,,,,,,,Tak,Czerwona kartka dla gospodarzy i rzut wolny
+127,Kontakt graczy,,,,,,,Nie,Ostry,Korpus,Pole karne gości,Gość,,,,,,,,,Nie,Żółta kartka dla gości i rzut karny
+128,Kontakt graczy,,,,,,,Nie,Ostry,Korpus,Pole karne gości,Gość,,,,,,,,,Tak,Czerwona kartka dla gości i rzut karny
+129,Kontakt graczy,,,,,,,Nie,Ostry,Korpus,Pole karne gospodarzy,Gospodarz,,,,,,,,,,Czerwona kartka dla gospodarzy i rzut karny
+130,Kontakt graczy,,,,,,,Nie,Ostry,Korpus,Pole karne gospodarzy,Gość,,,,,,,,,Nie,Żółta kartka dla gości i rzut wolny
+131,Kontakt graczy,,,,,,,Nie,Ostry,Korpus,Pole karne gospodarzy,Gość,,,,,,,,,Tak,Czerwona kartka dla gości i rzut wolny
+132,Kontakt graczy,,,,,,,Nie,Ostry,Korpus,Poza polem karnym,Gospodarz,,,,,,,,,Nie,Żółta kartka dla gospodarzy i rzut wolny
+133,Kontakt graczy,,,,,,,Nie,Ostry,Korpus,Poza polem karnym,Gospodarz,,,,,,,,,Tak,Czerwona kartka dla gospodarzy i rzut wolny
+134,Kontakt graczy,,,,,,,Nie,Ostry,Korpus,Poza polem karnym,Gość,,,,,,,,,,Czerwona kartka dla gości i rzut wolny
+135,Kontakt graczy,,,,,,,Nie,Ostry,Głowa,Pole karne gości,Gospodarz,,,,,,,,,,Czerwona kartka dla gospodarzy i rzut wolny
+136,Kontakt graczy,,,,,,,Nie,Ostry,Głowa,Pole karne gości,Gość,,,,,,,,,,Czerwona kartka dla gości i rzut karny
+137,Kontakt graczy,,,,,,,Nie,Ostry,Głowa,Pole karne gospodarzy,Gospodarz,,,,,,,,,,Czerwona kartka dla gospodarzy i rzut karny
+138,Kontakt graczy,,,,,,,Nie,Ostry,Głowa,Pole karne gospodarzy,Gość,,,,,,,,,,Czerwona kartka dla gości i rzut wolny
+139,Kontakt graczy,,,,,,,Nie,Ostry,Głowa,Poza polem karnym,Gospodarz,,,,,,,,,,Czerwona kartka dla gospodarzy i rzut wolny
+140,Kontakt graczy,,,,,,,Nie,Ostry,Głowa,Poza polem karnym,Gość,,,,,,,,,,Czerwona kartka dla gości i rzut wolny
