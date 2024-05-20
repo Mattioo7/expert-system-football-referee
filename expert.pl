@@ -11,8 +11,9 @@ option(2, show_rules, 'Pokaz warunki zasady').
 option(3, add_rule, 'Dodaj nowa zasade').
 option(4, delete_rule, 'Usun zasade').
 option(5, edit_conditions, 'Edytuj warunki zasady').
-option(6, save_database, 'Zapisz zmiany').
-option(7, exit_program, 'Zakoncz').
+option(6, add_decision, 'Dodaj nowa decyzje').
+option(7, save_database, 'Zapisz zmiany').
+option(8, exit_program, 'Zakoncz').
 
 show_welcome_message :-
     nl,
@@ -130,13 +131,23 @@ save_database :-
 
 save_database :- unknown_error.
 
+add_decision :-
+    write('Podaj opis nowej decyzji (musi byc w apostrofach): '),
+    read(Decision),
+    write('Podaj identyfikator decyzji: '),
+    read(Id),
+    assert(football_decision(Id, Decision)),
+    format('Dodano decyzje ~w: ~w~n', [Id, Decision]).
+add_decision :- unknown_error.
+
+% Helpers:
+
 print_decisions :-
     football_decision(Id, Decision),
     format('~w: ~w~n', [Id, Decision]),
     fail.
 print_decisions :- !.
 
-% Helpers:
 
 print_all_decision_ids :-
     findall(Id, football_decision(Id, _), Ids),
