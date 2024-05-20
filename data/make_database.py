@@ -6,6 +6,8 @@ DB_NAME = '../db.pl'
 DECISION_NAME = 'football_decision'
 FEATURE_NAME = 'football_feature'
 NOTHING = "nic"
+DYNAMIC_CLAUSE = ":- dynamic {0}/{1}."
+
 
 variables = [
     "what_happened",
@@ -46,6 +48,8 @@ def main():
     for decision in unique_decisions:
         if decision[0] != "" and decision[1] != "":
             sub_data.append((int(decision[0]), get_decision(decision[0], decision[1])))
+    data.append(DYNAMIC_CLAUSE.format(DECISION_NAME, 2))
+    data.append('')
     data.extend(x[1] for x in sorted(sub_data, key=lambda item: item[0]))
     data.append('')
 
@@ -62,6 +66,8 @@ def main():
             variable = variables[i - 1]
             attributes[i].append(get_attribute(id, variable, attribute))
 
+    data.append(DYNAMIC_CLAUSE.format(FEATURE_NAME, 3))
+    data.append('')
     for key in attributes.keys():
         group = attributes[key]
         data.extend(group)

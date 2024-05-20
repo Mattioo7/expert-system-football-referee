@@ -1,3 +1,5 @@
+:- dynamic football_decision/2.
+
 football_decision(1, 'Brak reakcji').
 football_decision(2, 'Brak reakcji').
 football_decision(3, 'Czerwona kartka dla gracza gospodarzy').
@@ -108,6 +110,8 @@ football_decision(107, 'Czerwona kartka dla gospodarzy i rzut karny').
 football_decision(108, 'Czerwona kartka dla gosci i rzut wolny').
 football_decision(109, 'Czerwona kartka dla gospodarzy i rzut wolny').
 football_decision(110, 'Czerwona kartka dla gosci i rzut wolny').
+
+:- dynamic football_feature/3.
 
 football_feature(1, what_happened, nic).
 football_feature(2, what_happened, rozmowa).

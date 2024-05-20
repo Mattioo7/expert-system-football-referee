@@ -71,7 +71,63 @@ print_rule_attributes(Id) :-
     format('  ~w: ~w~n', [Feature, Value]),
     fail.
 
-add_rule :- !.
-delete_rule :- !.
-edit_conditions :- !.
-save_database :- !.
+add_rule :-
+    write('Podaj decyzje (zamknieta w apostrofy): '),
+    read(Decision),
+    max_id(Id),
+    NewId is Id + 1,
+    assert(football_decision(NewId, Decision)),
+    format('Dodano zasade ~w: ~w~n', [NewId, Decision]).
+add_rule :- unknown_error.
+
+delete_rule :-
+    write('Podaj numer zasady: '),
+    read(Id),
+    retract(football_decision(Id, _)),
+    retractall(football_feature(Id, _, _)),
+    format('Usunieto zasade ~w~n', [Id]).
+delete_rule :- unknown_error.
+
+edit_conditions :- 
+    write('Podaj numer zasady: '),
+    read(Id),
+    edit_conditions(Id),
+    save_database.
+edit_conditions :- unknown_error.
+
+edit_conditions(Id) :-
+    !.
+
+save_database :-
+    tell('db.pl'),
+    listing(football_decision),
+    listing(football_feature),
+    told,
+    write('Zapisano zmiany w bazie danych!'), nl.
+
+save_database :- unknown_error.
+
+% Helpers:
+
+unknown_error :-
+    write('Nieznany blad!'), nl.
+
+collect_ids(Ids) :-
+    findall(Id, football_decision(Id, _), Ids).
+
+max_id(MaxId) :-
+    collect_ids(Ids),
+    max_list(Ids, MaxId).
+
+max_list([Head|Tail], Max) :-
+    max_list(Tail, Head, Max).
+
+max_list([], Max, Max).
+
+max_list([Head|Tail], CurrentMax, Max) :-
+    Head > CurrentMax,
+    max_list(Tail, Head, Max).
+
+max_list([Head|Tail], CurrentMax, Max) :-
+    Head =< CurrentMax,
+    max_list(Tail, CurrentMax, Max).
