@@ -1,5 +1,6 @@
 from pprint import pprint
 from unidecode import unidecode
+from copy import deepcopy as dc
 SKIP_HEADER = True
 FILE_PATH = './data.csv'
 DB_NAME = '../db.pl'
@@ -8,6 +9,8 @@ FEATURE_NAME = 'football_feature'
 VARIABLES_NAME = 'football_variable_names'
 NOTHING = "brak"
 DYNAMIC_CLAUSE = ":- dynamic {0}/{1}."
+FILL_EMPTY_VALUES = False
+FILL_EMPTY_VALUES_INCLUDE_EMPTY = True
 
 DECISION_VARIABLE_NAME = 'decision'
 variables = [
@@ -39,8 +42,13 @@ def main():
         rows = file.readlines()
         rows = [x.split(',') for x in rows]
         rows = [[process_decision(row[i]) if i == len(row) - 1 else process_attribute(row[i]) for i in range(len(row))] for row in rows]
+        rows = [row for row in rows if not all_empty(row)]
+        
         if SKIP_HEADER:
             rows = rows[1:]
+
+    if FILL_EMPTY_VALUES:
+        rows = fill_empty_values(rows)
 
     data = []
 
@@ -55,9 +63,6 @@ def main():
     # Get attributes for each rule
     attributes = {i: [] for i in range(len(rows[0]) - 1)}
     for row in rows:
-        all_empty = all(value == "" for value in row)
-        if all_empty:
-            continue
         id = row[0]
 
         # Process decision
@@ -105,6 +110,34 @@ def save_database(data):
         for row in data:
             file.write(row)
             file.write('\n')
+
+def all_empty(row):
+    return all(value == "" for value in row)
+
+def any_empty(row):
+    return any(value == "" for value in row)
+
+def fill_empty_values(rows):
+    values_dictionary = {}
+    for i in range(len(rows[0])):
+        values_dictionary[i] = list({x[i] for x in rows if x[i] != ""})
+
+    iteration_rows = []
+    current_rows = dc(rows)
+    for i in range(len(rows[0])):
+        print(i, len(current_rows))
+        for row in current_rows:
+            if row[i] != "":
+                iteration_rows.append(row)
+            else:
+                for value in values_dictionary[i]:
+                    new_row = dc(row)
+                    new_row[i] = value
+                    iteration_rows.append(new_row)
+        current_rows = dc(iteration_rows)
+
+    return iteration_rows
+
 
 if __name__ == '__main__':
     main()
