@@ -1,4 +1,4 @@
-:- consult('database.pl').
+:- consult('db.pl').
 :- consult('attributes_helper.pl').
 :- consult('fuzzy_reasoning.pl').
 
@@ -6,11 +6,11 @@ football_referee(Decision) :-
     question_number(QuestionNumber),
     make_decision(QuestionNumber, [], Decision).
 
-make_decision([], Conditions, Decision) :-
+make_decision([], Conditions, Id) :-
     find_matching_situations(Conditions, MatchingEntries),
-    (   MatchingEntries = [(Decision, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _)|_] ->
+    (   MatchingEntries = [(Id)|_] ->
         true
-    ;   Decision = 'Nie mozna podjąć decyzji'
+    ;   Id = 'Nie mozna podjąć decyzji'
     ).
 
 make_decision(Attributes, Conditions, Decision) :-
@@ -37,7 +37,7 @@ find_optimal_attribute(Attributes, Conditions, BestAttribute) :-
 
 get_distinct_values(ElementIdx, Conditions, Values) :-
     findall(Value,
-            (football_situation(ID, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _),
+            (football_feature(ID, _, _),
              meets_criteria(ID, Conditions),
              get_answer(ID, ElementIdx, Value)),
             AllValues),
@@ -73,8 +73,8 @@ meets_criteria(ID, [(ElementIdx, Values)|Rest]) :-
 
 differing_pairs_count(ElementIdx, Conditions, PairsCount) :-
     findall((ID1, ID2),
-            (football_situation(ID1, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _),
-             football_situation(ID2, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _),
+            (football_feature(ID1, decision, _),
+             football_feature(ID2, decision, _),
              ID1 < ID2,
              differs_in_attribute_and_decision(ID1, ID2, ElementIdx, Conditions)),
             Pairs),
@@ -83,15 +83,21 @@ differing_pairs_count(ElementIdx, Conditions, PairsCount) :-
 differs_in_attribute_and_decision(ID1, ID2, ElementIdx, Conditions) :-
     get_answer(ID1, ElementIdx, ElementValue1),
     get_answer(ID2, ElementIdx, ElementValue2),
-    football_situation(ID1, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, Dec1),
-    football_situation(ID2, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, Dec2),
+    get_decision_name(ID1, Dec1),
+    get_decision_name(ID2, Dec2),
     ElementValue1 \= ElementValue2,
     Dec1 \= Dec2,
     meets_criteria(ID1, Conditions),
     meets_criteria(ID2, Conditions).
 
 find_matching_situations(Conditions, MatchingEntries) :-
-    findall((ID, A1, A2, A3, A4, A5, A6, A7, A8, A9, A10, A11, A12, A13, A14, A15, A16, A17, A18, A19, A20, A21, Dec),
-            (football_situation(ID, A1, A2, A3, A4, A5, A6, A7, A8, A9, A10, A11, A12, A13, A14, A15, A16, A17, A18, A19, A20, A21, Dec),
-             meets_criteria(ID, Conditions)),
-            MatchingEntries).
+    get_unique_rule_ids(UniqueIds),
+    get_unique_rules(UniqueIds, MatchingEntries, Conditions).
+
+get_unique_rules([Id|RestIds], Result, Conditions) :-
+    meets_criteria(Id, Conditions),   % Check if the ID meets the criteria
+    meets_criteria(Id, Conditions),   % Add additional conditions if needed
+    get_unique_rules(RestIds, RestResult), % Recurse on the tail of the list
+    Result = [Id|RestResult].
+
+get_unique_rules([], [], []).

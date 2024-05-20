@@ -1,7 +1,5 @@
 question_number([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21]).
 
-
-
 question( 1, ' 1.   Co sie stalo?').
 question( 2, ' 2.   Za jaka linie wypadla pilka?').
 question( 3, ' 3.   Linia koncowa na połowie ktorej druzyny?').
@@ -26,7 +24,13 @@ question(21, '21.   Czy ma już żółtą kartkę?').
 
 football_variable_names(what_happened, ball_out_line, end_line_side, last_touch_team, pass_offside, pass_receiver_position, passing_team, legal_contact, foul_dynamics, player_touched_location, foul_location, rule_breaker, goal_side, hand_touch_location, hand_touch_player, hand_stopped_play, person_1, person_2, insults, first_insult, yellow_card_status).
 
+get_unique_rule_ids(UniqueIds) :-
+    findall(Id, football_feature(Id, _, _), Ids),
+    sort(Ids, UniqueIds).
+
 get_decision_name(Id, Name) :-
+    football_feature(Id, decision, DecisionName),
+    football_decision(DecisionName, Name).
 
 get_answer(Id, Index, Value) :-
     get_key(Index, Key),

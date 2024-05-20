@@ -18,7 +18,7 @@ show_welcome_message :-
     nl,
     write('****************************************'), nl,
     write('*                                      *'), nl,
-    write('*  Witaj w systemie                    *'), nl,
+    write('*  Witaj w systemie eksperckim         *'), nl,
     write('*  Pomocny Inteligentny Likwidator     *'), nl,
     write('*  Kontrowersji Arbitrów (PILKA)!      *'), nl,
     write('*                                      *'), nl,
