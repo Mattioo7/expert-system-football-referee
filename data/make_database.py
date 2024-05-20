@@ -2,7 +2,7 @@ from pprint import pprint
 from unidecode import unidecode
 SKIP_HEADER = True
 FILE_PATH = './data.csv'
-DB_NAME = 'db.pl'
+DB_NAME = '../db.pl'
 DECISION_NAME = 'football_decision'
 FEATURE_NAME = 'football_feature'
 NOTHING = "nic"
