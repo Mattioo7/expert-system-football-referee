@@ -60,7 +60,7 @@ ask_user_for_input(BestAttribute, Values, Conditions, NewConditions) :-
 
 get_distinct_decisions(Conditions, Decisions) :-
     findall(Dec,
-            (football_situation(ID, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, _, Dec),
+            (football_feature(ID, decision, Dec),
              meets_criteria(ID, Conditions)),
             AllDecisions),
     sort(AllDecisions, Decisions).

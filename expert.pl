@@ -5,6 +5,7 @@ main :-
     get_options,
     choose_option.
 
+option(0, print_decisions, 'Pokaz wszystkie decyzje').
 option(1, print_rules, 'Pokaz wszystkie zasady').
 option(2, show_rules, 'Pokaz warunki zasady').
 option(3, add_rule, 'Dodaj nowa zasade').
@@ -45,8 +46,8 @@ check_if_exit(_) :-
     main.
 
 print_rules :- 
-    football_decision(Id, Decision),
-    print_rule(Id, Decision),
+    football_feature(Id, decision, Name),
+    print_rule(Id, Name),
     fail.
 print_rules :- !.
 
@@ -63,7 +64,7 @@ show_rules :-
 show_rules :- !.
 
 print_rule_name(Id) :-
-    football_decision(Id, Decision),
+    football_feature(Id, decision, Decision),
     print_rule(Id, Decision).
 
 print_rule_attributes(Id) :-
@@ -72,18 +73,29 @@ print_rule_attributes(Id) :-
     fail.
 
 add_rule :-
-    write('Podaj decyzje (zamknieta w apostrofy): '),
-    read(Decision),
+    print_all_decision_ids,
+    write('Podaj decyzje dla zasady: '),
+    read(DecisionId),
+    football_decision(DecisionId, _),
     max_id(Id),
     NewId is Id + 1,
-    assert(football_decision(NewId, Decision)),
-    format('Dodano zasade ~w: ~w~n', [NewId, Decision]).
+    assert(football_feature(NewId, decision, DecisionId)),
+    add_blank_conditions(NewId),
+    format('Dodano zasade ~w: ~w~n', [NewId, DecisionId]).
 add_rule :- unknown_error.
+
+add_blank_conditions(Id) :-
+    findall(FeatureId, football_feature(_, FeatureId, _), FeatureIds),
+    subtract(FeatureIds, [decision], FeatureIdsWithoutDecision),
+    add_blank_conditions(Id, FeatureIdsWithoutDecision).
+
+add_blank_conditions(Id, [FeatureId|Rest]) :-
+    assert(football_feature(Id, FeatureId, brak)),
+    add_blank_conditions(Id, Rest).
 
 delete_rule :-
     write('Podaj numer zasady: '),
     read(Id),
-    retract(football_decision(Id, _)),
     retractall(football_feature(Id, _, _)),
     format('Usunieto zasade ~w~n', [Id]).
 delete_rule :- unknown_error.
@@ -91,12 +103,21 @@ delete_rule :- unknown_error.
 edit_conditions :- 
     write('Podaj numer zasady: '),
     read(Id),
-    edit_conditions(Id),
-    save_database.
+    football_feature(Id, decision, _),
+    print_all_feature_ids,
+    write('Podaj nazwe cechy: '),
+    read(FeatureId),
+    football_feature(_, FeatureId, _),
+    edit_conditions(Id, FeatureId).
 edit_conditions :- unknown_error.
 
-edit_conditions(Id) :-
-    !.
+edit_conditions(Id, FeatureId) :-
+    print_all_values_for_feature(FeatureId),
+    write('Podaj wartosc: '),
+    read(Value),
+    football_feature(_, FeatureId, Value),
+    assert(football_feature(Id, FeatureId, Value)),
+    format('Zmieniono wartosc cechy ~w na ~w~n', [FeatureId, Value]).
 
 save_database :-
     tell('db.pl'),
@@ -107,13 +128,37 @@ save_database :-
 
 save_database :- unknown_error.
 
+print_decisions :-
+    football_decision(Id, Decision),
+    format('~w: ~w~n', [Id, Decision]),
+    fail.
+print_decisions :- !.
+
 % Helpers:
 
+print_all_decision_ids :-
+    findall(Id, football_decision(Id, _), Ids),
+    sort(Ids, IdsDistinct),
+    atomic_list_concat(IdsDistinct, ', ', IdsString),
+    format('Dostepne decyzje: ~w~n', [IdsString]).
+
+print_all_feature_ids :-
+    findall(Name, football_feature(_, Name, _), Names),
+    sort(Names, NamesDistinct),
+    atomic_list_concat(NamesDistinct, ', ', NamesString),
+    format('Dostepne cechy: ~w~n', [NamesString]).
+
+print_all_values_for_feature(FeatureId) :-
+    findall(Value, football_feature(_, FeatureId, Value), Values),
+    sort(Values, ValuesDistinct),
+    atomic_list_concat(ValuesDistinct, ', ', ValuesString),
+    format('Dostepne wartosci: ~w~n', [ValuesString]).
+
 unknown_error :-
-    write('Nieznany blad!'), nl.
+    write('Nieznany blad, prawdopodobnie podano zla opcje!'), nl.
 
 collect_ids(Ids) :-
-    findall(Id, football_decision(Id, _), Ids).
+    findall(Id, football_feature(Id, decision, _), Ids).
 
 max_id(MaxId) :-
     collect_ids(Ids),

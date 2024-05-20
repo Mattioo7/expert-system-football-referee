@@ -5,10 +5,11 @@ FILE_PATH = './data.csv'
 DB_NAME = '../db.pl'
 DECISION_NAME = 'football_decision'
 FEATURE_NAME = 'football_feature'
-NOTHING = "nic"
+VARIABLES_NAME = 'football_variable_names'
+NOTHING = "brak"
 DYNAMIC_CLAUSE = ":- dynamic {0}/{1}."
 
-
+DECISION_VARIABLE_NAME = 'decision'
 variables = [
     "what_happened",
     "ball_out_line",
@@ -43,22 +44,27 @@ def main():
 
     data = []
 
-    unique_decisions = {(row[0], row[-1]) for row in rows}
-    sub_data = []
-    for decision in unique_decisions:
-        if decision[0] != "" and decision[1] != "":
-            sub_data.append((int(decision[0]), get_decision(decision[0], decision[1])))
+    # Get possible decisions
+    unique_decisions = {row[-1] for row in rows if row[-1] != ""}
     data.append(DYNAMIC_CLAUSE.format(DECISION_NAME, 2))
     data.append('')
-    data.extend(x[1] for x in sorted(sub_data, key=lambda item: item[0]))
+    data.extend(get_decision(process_attribute(x), x) for x in unique_decisions)
     data.append('')
 
-    attributes = {i: [] for i in range(1, len(rows[0]) - 1)}
+    
+    # Get attributes for each rule
+    attributes = {i: [] for i in range(len(rows[0]) - 1)}
     for row in rows:
         all_empty = all(value == "" for value in row)
         if all_empty:
             continue
         id = row[0]
+
+        # Process decision
+        decision_key = process_attribute(row[-1])
+        attributes[0].append(get_attribute(id, DECISION_VARIABLE_NAME, decision_key))
+
+        # Process other variables
         for i in range(1, len(row) - 1):
             attribute = row[i]
             if attribute == "":
@@ -72,6 +78,9 @@ def main():
         group = attributes[key]
         data.extend(group)
         data.append('')
+
+    data.append(get_variables())
+    data.append('')
 
     save_database(data)
 
@@ -87,6 +96,9 @@ def get_decision(id, value):
 
 def get_attribute(id, name, value):
     return f'{FEATURE_NAME}({id}, {name}, {value}).'
+
+def get_variables():
+    return f'{VARIABLES_NAME}({", ".join(variables)}).'
 
 def save_database(data):
     with open(DB_NAME, 'w') as file:
