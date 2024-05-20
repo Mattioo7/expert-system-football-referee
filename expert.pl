@@ -87,11 +87,13 @@ add_rule :- unknown_error.
 add_blank_conditions(Id) :-
     findall(FeatureId, football_feature(_, FeatureId, _), FeatureIds),
     subtract(FeatureIds, [decision], FeatureIdsWithoutDecision),
-    add_blank_conditions(Id, FeatureIdsWithoutDecision).
+    sort(FeatureIdsWithoutDecision, FeatureIdsDistinct),
+    add_blank_conditions(Id, FeatureIdsDistinct).
 
 add_blank_conditions(Id, [FeatureId|Rest]) :-
     assert(football_feature(Id, FeatureId, brak)),
     add_blank_conditions(Id, Rest).
+add_blank_conditions(_, []).
 
 delete_rule :-
     write('Podaj numer zasady: '),

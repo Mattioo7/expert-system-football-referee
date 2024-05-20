@@ -1,29 +1,29 @@
 :- dynamic football_decision/2.
 
-football_decision(rzut_gosci_dla_gospodarzy, 'Rzut gosci dla gospodarzy').
+football_decision(spalony_druzyny_gospodarzy, 'Spalony druzyny gospodarzy').
+football_decision(zolta_kartka_dla_gospodarzy_i_rzut_wolny, 'Zolta kartka dla gospodarzy i rzut wolny').
+football_decision(zolta_kartka_dla_gracza_gospodarzy, 'Zolta kartka dla gracza gospodarzy').
+football_decision(brak_reakcji, 'Brak reakcji').
+football_decision(aut_dla_gospodarzy, 'Aut dla gospodarzy').
+football_decision(gol_dla_gosci, 'Gol dla gosci').
+football_decision(czerwona_kartka_dla_gosci_i_rzut_karny, 'Czerwona kartka dla gosci i rzut karny').
 football_decision(rzut_rozny_dla_gosci, 'Rzut rozny dla gosci').
 football_decision(czerwona_kartka_dla_gospodarzy_i_rzut_karny, 'Czerwona kartka dla gospodarzy i rzut karny').
-football_decision(czerwona_kartka_dla_gracza_gosci, 'Czerwona kartka dla gracza gosci').
-football_decision(czerwona_kartka_dla_gracza_gospodarzy, 'Czerwona kartka dla gracza gospodarzy').
-football_decision(spalony_druzyny_gosci, 'Spalony druzyny gosci').
-football_decision(wznowienie_od_bramki, 'Wznowienie od bramki').
-football_decision(czerwona_kartka_dla_gosci_i_rzut_wolny, 'Czerwona kartka dla gosci i rzut wolny').
-football_decision(zolta_kartka_dla_gospodarzy_i_rzut_karny, 'Zolta kartka dla gospodarzy i rzut karny').
-football_decision(aut_dla_gosci, 'Aut dla gosci').
-football_decision(spalony_druzyny_gospodarzy, 'Spalony druzyny gospodarzy').
-football_decision(zolta_kartka_dla_gracza_gosci, 'Zolta kartka dla gracza gosci').
 football_decision(gol_dla_gospodarzy, 'Gol dla gospodarzy').
-football_decision(brak_reakcji, 'Brak reakcji').
-football_decision(czerwona_kartka_dla_gosci_i_rzut_karny, 'Czerwona kartka dla gosci i rzut karny').
-football_decision(gol_dla_gosci, 'Gol dla gosci').
 football_decision(zolta_kartka_dla_gosci_i_rzut_wolny, 'Zolta kartka dla gosci i rzut wolny').
-football_decision(rzut_wolny_dla_gospodarzy, 'Rzut wolny dla gospodarzy').
-football_decision(zolta_kartka_dla_gosci_i_rzut_karny, 'Zolta kartka dla gosci i rzut karny').
-football_decision(aut_dla_gospodarzy, 'Aut dla gospodarzy').
-football_decision(zolta_kartka_dla_gracza_gospodarzy, 'Zolta kartka dla gracza gospodarzy').
 football_decision(rzut_wolny_dla_gosci, 'Rzut wolny dla gosci').
+football_decision(zolta_kartka_dla_gracza_gosci, 'Zolta kartka dla gracza gosci').
+football_decision(zolta_kartka_dla_gospodarzy_i_rzut_karny, 'Zolta kartka dla gospodarzy i rzut karny').
+football_decision(wznowienie_od_bramki, 'Wznowienie od bramki').
+football_decision(rzut_gosci_dla_gospodarzy, 'Rzut gosci dla gospodarzy').
+football_decision(czerwona_kartka_dla_gracza_gosci, 'Czerwona kartka dla gracza gosci').
+football_decision(spalony_druzyny_gosci, 'Spalony druzyny gosci').
+football_decision(rzut_wolny_dla_gospodarzy, 'Rzut wolny dla gospodarzy').
+football_decision(czerwona_kartka_dla_gracza_gospodarzy, 'Czerwona kartka dla gracza gospodarzy').
+football_decision(czerwona_kartka_dla_gosci_i_rzut_wolny, 'Czerwona kartka dla gosci i rzut wolny').
 football_decision(czerwona_kartka_dla_gospodarzy_i_rzut_wolny, 'Czerwona kartka dla gospodarzy i rzut wolny').
-football_decision(zolta_kartka_dla_gospodarzy_i_rzut_wolny, 'Zolta kartka dla gospodarzy i rzut wolny').
+football_decision(aut_dla_gosci, 'Aut dla gosci').
+football_decision(zolta_kartka_dla_gosci_i_rzut_karny, 'Zolta kartka dla gosci i rzut karny').
 
 :- dynamic football_feature/3.
 
@@ -2468,6 +2468,4 @@ football_feature(107, yellow_card_status, brak).
 football_feature(108, yellow_card_status, brak).
 football_feature(109, yellow_card_status, brak).
 football_feature(110, yellow_card_status, brak).
-
-football_variable_names(what_happened, ball_out_line, end_line_side, last_touch_team, pass_offside, pass_receiver_position, passing_team, legal_contact, foul_dynamics, player_touched_location, foul_location, rule_breaker, goal_side, hand_touch_location, hand_touch_player, hand_stopped_play, person_1, person_2, insults, first_insult, yellow_card_status).
 

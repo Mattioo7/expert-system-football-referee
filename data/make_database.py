@@ -79,8 +79,8 @@ def main():
         data.extend(group)
         data.append('')
 
-    data.append(get_variables())
-    data.append('')
+    # data.append(get_variables())
+    # data.append('')
 
     save_database(data)
 
