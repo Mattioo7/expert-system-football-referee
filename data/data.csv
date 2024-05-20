@@ -27,21 +27,21 @@ Pytania:,Co się stało?,Za jaką linię wypadła piłka?,Linia końcowa na poł
 26,Rozmowa,,,,,,,,,,,,,,,,Gość,Gospodarz,Nie,,,Brak reakcji
 27,Dotknięcie piłki ręką,,,,,,,,,,,,,Poza boiskiem,,,,,,,,Brak reakcji
 28,Dotknięcie piłki ręką,,,,,,,,,,,,,Poza polem karnym,Gość,Tak,,,,,,Czerwona kartka dla gracza gości
-29,Dotknięcie piłki ręką,,,,,,,,,,,,,,Gość,Nie,,,,,Tak,Czerwona kartka dla gracza gości
-30,Dotknięcie piłki ręką,,,,,,,,,,,,,,Gość,Nie,,,,,Nie,Żółta kartka dla gracza gości
-31,Dotknięcie piłki ręką,,,,,,,,,,,,,,Gospodarz,Tak,,,,,,Czerwona kartka dla gracza gospodarzy
-32,Dotknięcie piłki ręką,,,,,,,,,,,,,,Gospodarz,Nie,,,,,Tak,Czerwona kartka dla gracza gospodarzy
-33,Dotknięcie piłki ręką,,,,,,,,,,,,,,Gospodarz,Nie,,,,,Nie,Żółta kartka dla gracza gospodarzy
+29,Dotknięcie piłki ręką,,,,,,,,,,,,,Poza polem karnym,Gość,Nie,,,,,Tak,Czerwona kartka dla gracza gości
+30,Dotknięcie piłki ręką,,,,,,,,,,,,,Poza polem karnym,Gość,Nie,,,,,Nie,Żółta kartka dla gracza gości
+31,Dotknięcie piłki ręką,,,,,,,,,,,,,Poza polem karnym,Gospodarz,Tak,,,,,,Czerwona kartka dla gracza gospodarzy
+32,Dotknięcie piłki ręką,,,,,,,,,,,,,Poza polem karnym,Gospodarz,Nie,,,,,Tak,Czerwona kartka dla gracza gospodarzy
+33,Dotknięcie piłki ręką,,,,,,,,,,,,,Poza polem karnym,Gospodarz,Nie,,,,,Nie,Żółta kartka dla gracza gospodarzy
 34,Dotknięcie piłki ręką,,,,,,,,,,,,,W polu karnym gości,Bramkarz gości,,,,,,,Brak reakcji
-35,Dotknięcie piłki ręką,,,,,,,,,,,,,,Gospodarz,,,,,,,Rzut wolny dla gości
-36,Dotknięcie piłki ręką,,,,,,,,,,,,,,Gość,Tak,,,,,,Czerwona kartka dla gracza gości
-37,Dotknięcie piłki ręką,,,,,,,,,,,,,,Gość,Nie,,,,,Tak,Czerwona kartka dla gracza gości
-38,Dotknięcie piłki ręką,,,,,,,,,,,,,,Gość,Nie,,,,,Nie,Żółta kartka dla gracza gości
+35,Dotknięcie piłki ręką,,,,,,,,,,,,,W polu karnym gości,Gospodarz,,,,,,,Rzut wolny dla gości
+36,Dotknięcie piłki ręką,,,,,,,,,,,,,W polu karnym gości,Gość,Tak,,,,,,Czerwona kartka dla gracza gości
+37,Dotknięcie piłki ręką,,,,,,,,,,,,,W polu karnym gości,Gość,Nie,,,,,Tak,Czerwona kartka dla gracza gości
+38,Dotknięcie piłki ręką,,,,,,,,,,,,,W polu karnym gości,Gość,Nie,,,,,Nie,Żółta kartka dla gracza gości
 39,Dotknięcie piłki ręką,,,,,,,,,,,,,W polu karnym gospodarzy,Bramkarz gospodarzy,,,,,,,Brak reakcji
-40,Dotknięcie piłki ręką,,,,,,,,,,,,,,Gość,,,,,,,Rzut wolny dla gospodarzy
-41,Dotknięcie piłki ręką,,,,,,,,,,,,,,Gospodarz,Tak,,,,,,Czerwona kartka dla gracza gospodarzy
-42,Dotknięcie piłki ręką,,,,,,,,,,,,,,Gospodarz,Nie,,,,,Tak,Czerwona kartka dla gracza gospodarzy
-43,Dotknięcie piłki ręką,,,,,,,,,,,,,,Gospodarz,Nie,,,,,Nie,Żółta kartka dla gracza gospodarzy
+40,Dotknięcie piłki ręką,,,,,,,,,,,,,W polu karnym gospodarzy,Gość,,,,,,,Rzut wolny dla gospodarzy
+41,Dotknięcie piłki ręką,,,,,,,,,,,,,W polu karnym gospodarzy,Gospodarz,Tak,,,,,,Czerwona kartka dla gracza gospodarzy
+42,Dotknięcie piłki ręką,,,,,,,,,,,,,W polu karnym gospodarzy,Gospodarz,Nie,,,,,Tak,Czerwona kartka dla gracza gospodarzy
+43,Dotknięcie piłki ręką,,,,,,,,,,,,,W polu karnym gospodarzy,Gospodarz,Nie,,,,,Nie,Żółta kartka dla gracza gospodarzy
 ,,,,,,,,,,,,,,,,,,,,,,
 44,Piłka poza boiskiem,Linia boczna,,Gości,,,,,,,,,,,,,,,,,,Aut dla gospodarzy
 45,Piłka poza boiskiem,Linia boczna,,Gospodarzy,,,,,,,,,,,,,,,,,,Aut dla gości
